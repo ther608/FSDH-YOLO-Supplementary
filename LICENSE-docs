@@ -1,0 +1,34 @@
+Data, documentation and results — CC BY 4.0
+============================================
+
+The following material in this repository is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+
+  - Appendix_C/            (per-seed results, markdown and CSV)
+  - android_deployment/paper_texts/           (paper section text)
+  - android_deployment/measurement_records/   (protocol, raw device records, verification)
+  - evaluation_protocol/
+  - reproduction_notes/
+  - README.md
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the license, and
+indicate whether changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution should reference the manuscript and this repository, e.g.:
+
+  <Authors>, "FSDH-YOLO: Spatial-to-Depth Rearrangement and Hierarchical
+  Feature Enhancement for Litchi Maturity Detection in Natural Orchards",
+  supplementary materials, https://github.com/ther608/FSDH-YOLO-Supplementary
+
+Note on third-party content
+---------------------------
+
+The datasets used in the study are not redistributed here; see README.md
+§ Data availability for their original sources and licenses.
+
+The bundled ONNX models are derived from weights trained on those datasets and
+are provided for reproducibility of the deployment results described in the
+manuscript.

@@ -1,0 +1,43 @@
+# --- Android / Gradle build output ---
+build/
+.gradle/
+local.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+captures/
+.cxx/
+
+# --- Android Studio / IDE ---
+.idea/
+*.iml
+.vscode/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Training artefacts (intentionally not published) ---
+*.pt
+*.pth
+*.ckpt
+weights/
+
+# --- Large intermediates ---
+*.tflite
+saved_model/
+_onnx2tf_native/
+
+# --- Raw screenshot dumps (records are kept; frames are not) ---
+shots/
+*.png
+!android_deployment/**/icon*.png

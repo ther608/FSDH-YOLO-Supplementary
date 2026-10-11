@@ -1,0 +1,18 @@
+# Normalize line endings to LF in the repository, regardless of platform.
+* text=auto eol=lf
+
+# Binary artefacts must never be line-ending converted.
+*.onnx  binary
+*.pt    binary
+*.tflite binary
+*.apk   binary
+*.png   binary
+*.jpg   binary
+
+# Markdown and CSV diff readably in review.
+*.md    text diff=markdown
+*.csv   text
+*.json  text
+*.kt    text
+*.py    text
+*.ps1   text
