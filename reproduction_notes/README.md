@@ -126,8 +126,13 @@ revision; every row now matches the record.
 
 ## 6. Known manuscript issues
 
-Two documentation defects remain in the current manuscript revision. Neither affects any
-computed result; both are labelling/rounding issues in text.
+Four documentation defects remain in the current manuscript revision. **None affects a
+computed result**; all four are labelling, scope or last-digit issues.
+
+Items 1 and 2 are in the main analysis appendices. Items 3 and 4 are single cells in
+deployment appendix tables — a diagnostic split and a record field respectively — and are
+also noted in
+[`../android_deployment/deployment_evaluation_results/README.md`](../android_deployment/deployment_evaluation_results/README.md).
 
 ### Issue 1 — Appendix B.2 summary table, row 4 (label does not match the data)
 
@@ -168,6 +173,38 @@ have been corrected in the current revision, two remain:
 
 The corresponding table columns in Table 12 are themselves correct; only the last digit
 of these two text values differs.
+
+### Issue 3 — Appendix B.5-1, FSDH-YOLO decode/NMS cell (mixed aggregation scope)
+
+The fixed-input table splits the pipeline latency into preprocess / inference / decode-NMS.
+For FSDH-YOLO the appendix prints `5.5 / 151.5 / 0.5`; the first two match the
+rounds-1–3 means (round 0 is the excluded cold start), but the third matches the
+**all-four-rounds** mean:
+
+| Scope | preprocess | inference | decode/NMS |
+|---|---|---|---|
+| rounds 1–3 (the protocol) | 5.5229 → 5.5 | 151.4844 → 151.5 | 0.4468 → **0.4** |
+| all 4 rounds | 5.2701 → 5.3 | 147.0049 → 147.0 | 0.4562 → 0.5 |
+
+Every other cell in that table — including both rows of the YOLO11n baseline — uses
+rounds 1–3. The end-to-end figure (157.5 ms, 6.35 FPS) is unaffected; decode/NMS is
+recorded for diagnosis only. **Suggested fix:** change `0.5` to `0.4`, or state the scope.
+
+### Issue 4 — Appendix B.5-4, run 2 charge level (wrong reading used)
+
+The thermal table reports the run-2 pre-timing charge level as `81 %`. The raw session log
+records 81 % at the *cooldown* check (17:15:42) and 80 % at the *pre-timing* reading
+(17:15:53); runs 1 and 3 happen to have identical values at both points, so only run 2
+exposes the mix-up.
+
+| Run | pre-timing charge, log | appendix |
+|---|---|---|
+| 1 | 81 % | 81 % ✓ |
+| 2 | **80 %** | 81 % ✗ |
+| 3 | 80 % | 80 % ✓ |
+
+Charge level is a record field, not a measurement. **Suggested fix:** change the run-2
+value to `80 → 80 %`.
 
 ---
 
