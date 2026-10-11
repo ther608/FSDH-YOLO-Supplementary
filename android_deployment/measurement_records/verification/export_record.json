@@ -1,0 +1,26 @@
+{
+  "source_weight": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\weights\\fsdh_yolo_n_rerun_seed0.pt",
+  "source_sha256_16": "19675c53ada75130",
+  "export_kwargs": {
+    "format": "onnx",
+    "imgsz": 640,
+    "batch": 1,
+    "dynamic": false,
+    "half": false,
+    "simplify": true,
+    "nms": false,
+    "opset": 17,
+    "device": "cpu"
+  },
+  "artifact": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\fsdh_yolo_n_rerun_seed0_640_fp32_opset17.onnx",
+  "artifact_sha256_16": "ca1c7063f89a6411",
+  "artifact_bytes": 12281244,
+  "versions": {
+    "ultralytics_source": "8.4.11",
+    "ultralytics_module": "D:\\yolo\\paper\\general journal\\ultralytics-main\\ultralytics-main\\ultralytics\\__init__.py",
+    "torch": "2.10.0+cu128",
+    "onnx": "1.23.1",
+    "onnxslim": "0.1.97",
+    "onnxruntime": "1.23.2"
+  }
+}

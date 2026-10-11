@@ -1,0 +1,24 @@
+{
+  "onnx": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\fsdh_yolo_n_rerun_seed0_640_fp32_opset17.onnx",
+  "tflite": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\fsdh_yolo_n_rerun_seed0_640_fp32.tflite",
+  "images": 12,
+  "tflite_input_shape": [
+    1,
+    640,
+    640,
+    3
+  ],
+  "tflite_output_shape": [
+    1,
+    7,
+    8400
+  ],
+  "input_layout_converted": "NHWC",
+  "output_layout_converted": "channels-first",
+  "max_abs_diff": 0.00152587890625,
+  "mean_abs_diff": 1.591462205396965e-05,
+  "p99_abs_diff": 0.00018310546875,
+  "preds_above_conf_onnx": 1553,
+  "preds_above_conf_tflite": 1553,
+  "max_box_coord_gap_px": 9.1552734375e-05
+}

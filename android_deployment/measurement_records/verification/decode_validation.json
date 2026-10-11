@@ -1,0 +1,104 @@
+{
+  "onnx": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\fsdh_yolo_n_rerun_seed0_640_fp32_opset17.onnx",
+  "images": 12,
+  "params": {
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 300,
+    "imgsz": 640
+  },
+  "totals": {
+    "mine": 207,
+    "ultralytics": 207
+  },
+  "images_with_matching_count": 12,
+  "images_with_class_mismatch": 0,
+  "max_box_gap_px": 1.0,
+  "mean_box_gap_px": 0.27681107954545453,
+  "per_image": [
+    {
+      "image": "250605_Outdoor_sunny_ID-0008_unripe-0_semi-ripe-3_ripe-32_sim-0.0112.jpg",
+      "mine": 55,
+      "ultralytics": 55,
+      "count_match": true,
+      "max_box_gap_px": 0.28857421875
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0029_unripe-0_semi-ripe-0_ripe-0_sim-0.0053.jpg",
+      "mine": 1,
+      "ultralytics": 1,
+      "count_match": true,
+      "max_box_gap_px": 6.103515625e-05
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0032_unripe-0_semi-ripe-3_ripe-39_sim-0.0147.jpg",
+      "mine": 39,
+      "ultralytics": 39,
+      "count_match": true,
+      "max_box_gap_px": 0.258056640625
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0033_unripe-0_semi-ripe-0_ripe-0_sim-0.0039.jpg",
+      "mine": 1,
+      "ultralytics": 1,
+      "count_match": true,
+      "max_box_gap_px": 0.0
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0038_unripe-6_semi-ripe-0_ripe-0_sim-0.0062.jpg",
+      "mine": 7,
+      "ultralytics": 7,
+      "count_match": true,
+      "max_box_gap_px": 0.0001220703125
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0039_unripe-0_semi-ripe-0_ripe-0_sim-0.0062.jpg",
+      "mine": 0,
+      "ultralytics": 0,
+      "count_match": true,
+      "max_box_gap_px": null
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0040_unripe-0_semi-ripe-0_ripe-0_sim-0.0062.jpg",
+      "mine": 1,
+      "ultralytics": 1,
+      "count_match": true,
+      "max_box_gap_px": 0.0
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0065_unripe-38_semi-ripe-0_ripe-0_sim-0.0012.jpg",
+      "mine": 39,
+      "ultralytics": 39,
+      "count_match": true,
+      "max_box_gap_px": 0.0001220703125
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0067_unripe-26_semi-ripe-0_ripe-0_sim-0.0022.jpg",
+      "mine": 31,
+      "ultralytics": 31,
+      "count_match": true,
+      "max_box_gap_px": 1.0
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0101_unripe-0_semi-ripe-3_ripe-2_sim-0.0092.jpg",
+      "mine": 6,
+      "ultralytics": 6,
+      "count_match": true,
+      "max_box_gap_px": 0.8096923828125
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0134_unripe-8_semi-ripe-0_ripe-0_sim-0.0203.jpg",
+      "mine": 9,
+      "ultralytics": 9,
+      "count_match": true,
+      "max_box_gap_px": 6.103515625e-05
+    },
+    {
+      "image": "250605_Outdoor_sunny_ID-0138_unripe-12_semi-ripe-0_ripe-0_sim-0.0103.jpg",
+      "mine": 18,
+      "ultralytics": 18,
+      "count_match": true,
+      "max_box_gap_px": 0.688232421875
+    }
+  ]
+}

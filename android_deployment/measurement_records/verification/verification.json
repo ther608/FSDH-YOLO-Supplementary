@@ -1,0 +1,95 @@
+{
+  "artifact": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\fsdh_yolo_n_rerun_seed0_640_fp32_opset17.onnx",
+  "onnx_meta": {
+    "opset": [
+      [
+        "ai.onnx",
+        17
+      ]
+    ],
+    "inputs": [
+      [
+        "images",
+        [
+          1,
+          3,
+          640,
+          640
+        ]
+      ]
+    ],
+    "outputs": [
+      [
+        "output0",
+        [
+          1,
+          7,
+          8400
+        ]
+      ]
+    ]
+  },
+  "raw_tensor": {
+    "images_checked": 24,
+    "shapes": [
+      [
+        [
+          1,
+          7,
+          8400
+        ],
+        [
+          1,
+          7,
+          8400
+        ]
+      ]
+    ],
+    "max_abs_diff": 0.00115966796875,
+    "mean_abs_diff": 1.5019609236333054e-05,
+    "p99_abs_diff": 0.00018310546875,
+    "preds_above_conf0.25_pt": 4289,
+    "preds_above_conf0.25_onnx": 4289,
+    "max_box_coord_gap_px_above_conf0.25": 0.0001220703125
+  },
+  "end_to_end": {
+    "pt": {
+      "map50": 0.8551945457885691,
+      "map": 0.7102365500702957,
+      "mp": 0.79166692509585,
+      "mr": 0.7862646260405127,
+      "per_class_map50_95": [
+        0.7311345310691235,
+        0.6418950949655218,
+        0.7576800241762419
+      ],
+      "speed_ms": {
+        "preprocess": 0.7985277777715097,
+        "inference": 111.5754111115599,
+        "loss": 0.0001507938750797794,
+        "postprocess": 1.0389523799642035
+      }
+    },
+    "onnx": {
+      "map50": 0.8552980298116527,
+      "map": 0.7095187313513477,
+      "mp": 0.7854253726109931,
+      "mr": 0.781587806808694,
+      "per_class_map50_95": [
+        0.7277449697737215,
+        0.6421246715873532,
+        0.7586865526929675
+      ],
+      "speed_ms": {
+        "preprocess": 178.81692143107233,
+        "inference": 755.4363896806968,
+        "loss": 0.0018738103949183982,
+        "postprocess": 324.65119603032707
+      }
+    },
+    "delta": {
+      "map50": 0.00010348402308357763,
+      "map50_95": -0.0007178187189480489
+    }
+  }
+}

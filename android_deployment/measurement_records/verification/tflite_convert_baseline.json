@@ -1,0 +1,25 @@
+{
+  "source_onnx": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android\\exported\\yolo11n_baseline_seed2_640_fp32_opset17.onnx",
+  "artifact": "D:\\yolo\\paper\\general journal\\ultralytics-main\\deploy_fsdh_yolo_n_android_native\\exported\\yolo11n_baseline_640_fp32.tflite",
+  "artifact_bytes": 10516348,
+  "input": {
+    "name": "serving_default_images:0",
+    "shape": [
+      1,
+      640,
+      640,
+      3
+    ],
+    "dtype": "<class 'numpy.float32'>"
+  },
+  "output": {
+    "name": "StatefulPartitionedCall:0",
+    "shape": [
+      1,
+      7,
+      8400
+    ],
+    "dtype": "<class 'numpy.float32'>"
+  },
+  "tf_version": "2.21.0"
+}

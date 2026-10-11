@@ -1,0 +1,117 @@
+﻿{
+    "schema":  "fsdh-yolo-android-deployment-summary/4",
+    "packageRoles":  {
+                         "full":  "Control package: used for ALL performance measurement (plus the backend comparison).",
+                         "slim":  "Deployment package: used ONLY for APK size and memory. No performance comparison is made between the two packages."
+                     },
+    "primary":  {
+                    "protocol":  "Predefined: control package, 3 x 60 s continuous camera, app force-stopped between runs and restarted only after HAL SKIN \u003c= 46 C, first 20 processed frames excluded.",
+                    "preRunSkinC":  null,
+                    "runs":  [
+                                 {
+                                     "validFrames":  210,
+                                     "processedFrames":  230,
+                                     "e2eMeanMs":  242.34,
+                                     "e2eSdMs":  17.86,
+                                     "e2eP95Ms":  284.63,
+                                     "inferMeanMs":  205.43,
+                                     "inferSdMs":  16.79,
+                                     "fps":  4.13
+                                 },
+                                 {
+                                     "validFrames":  199,
+                                     "processedFrames":  219,
+                                     "e2eMeanMs":  255.11,
+                                     "e2eSdMs":  20.66,
+                                     "e2eP95Ms":  305.54,
+                                     "inferMeanMs":  216.11,
+                                     "inferSdMs":  19.55,
+                                     "fps":  3.92
+                                 },
+                                 {
+                                     "validFrames":  197,
+                                     "processedFrames":  217,
+                                     "e2eMeanMs":  257.09,
+                                     "e2eSdMs":  18.09,
+                                     "e2eP95Ms":  292.96,
+                                     "inferMeanMs":  217.33,
+                                     "inferSdMs":  17.05,
+                                     "fps":  3.89
+                                 }
+                             ],
+                    "ranges":  {
+                                   "e2eMs":  "242.34 - 257.09",
+                                   "p95Ms":  "284.63 - 305.54",
+                                   "inferMs":  "205.43 - 217.33",
+                                   "fps":  "3.89 - 4.13"
+                               },
+                    "note":  "These three runs ARE the reported deployment performance result. Session-level only; frames are never pooled across sessions.",
+                    "preTimingSkinC":  [
+                                           53.87,
+                                           53.75,
+                                           53.72
+                                       ]
+                },
+    "diagnostics":  {
+                        "purpose":  "Post-hoc investigation of why the slim sessions were slower. NOT part of the predefined protocol; these numbers are not performance results.",
+                        "runs":  [
+                                     {
+                                         "label":  "slim-1",
+                                         "build":  "slim",
+                                         "validFrames":  184,
+                                         "e2eMeanMs":  272.99,
+                                         "e2eSdMs":  36.49,
+                                         "e2eP95Ms":  344.44,
+                                         "fps":  3.66,
+                                         "preTimingSkinC":  53.6
+                                     },
+                                     {
+                                         "label":  "slim-2",
+                                         "build":  "slim",
+                                         "validFrames":  157,
+                                         "e2eMeanMs":  313.59,
+                                         "e2eSdMs":  27.45,
+                                         "e2eP95Ms":  354.31,
+                                         "fps":  3.19,
+                                         "preTimingSkinC":  55.94
+                                     },
+                                     {
+                                         "label":  "full-recheck",
+                                         "build":  "full",
+                                         "validFrames":  169,
+                                         "e2eMeanMs":  294.41,
+                                         "e2eSdMs":  41.68,
+                                         "e2eP95Ms":  351.08,
+                                         "fps":  3.40,
+                                         "preTimingSkinC":  54.07
+                                     }
+                                 ],
+                        "decisiveResult":  "The full-build recheck is the same build as primary run 1, with pre-timing SKIN only 0.20 C higher, yet measured 21.5% slower (242.34 -\u003e 294.41 ms) about 16 minutes later.",
+                        "conclusions":  [
+                                            "The build effect and the session drift are confounded; NO equivalence conclusion is drawn between the two packages.",
+                                            "It also cannot be claimed that the slowdown was caused by the deployment package. The evidence supports only: no evidence that it was caused by that build difference.",
+                                            "Across all six sessions the pre-timing SKIN range is 2.3 C while the session-mean range is 1.29x, so the drift is not explained by the temperature readings available here.",
+                                            "No causal attribution is made (no CPU frequency, scheduler state, power policy or throttling events were recorded).",
+                                            "The deployment package is used for APK size and memory only; it takes part in no FPS or latency comparison."
+                                        ]
+                    },
+    "backToBackContrast":  {
+                               "note":  "Superseded runs with no reset between them. Methodological contrast only, NOT results.",
+                               "e2eMeansMs":  [
+                                                  268.22,
+                                                  322.35,
+                                                  381.3
+                                              ],
+                               "rangeMs":  "268.22 - 381.30",
+                               "spreadPct":  42,
+                               "vsResetPct":  6
+                           },
+    "sessionDependence":  {
+                              "evidence":  [
+                                               "B.5.1 fixed-frame replay: 1.45-1.76x between two sessions, same device and protocol.",
+                                               "This protocol: 1.22x (+21.5%, 242.34 -\u003e 294.41 ms) between two sessions of the SAME build, about 16 min apart, pre-timing SKIN differing by 0.20 C."
+                                           ],
+                              "statement":  "Absolute latency is strongly session-dependent and the available device-state readings do not establish that two sessions ran under equivalent conditions. Cause undetermined. Absolute latency is reported as ranges only, structural conclusions use within-session paired ratios, and no causal attribution is made. This bounds the deployment section as preliminary on-device deployment validation, not a strict mobile performance benchmark.",
+                              "resetCaveat":  "The reset reduces the spread between adjacent runs (6% vs 42% back to back) but does not make the measurement repeatable: the same build re-run later at a similar starting SKIN was clearly slower. A single skin-temperature reset does not guarantee comparable performance state across periods."
+                          }
+}

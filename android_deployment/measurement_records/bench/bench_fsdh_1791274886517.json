@@ -1,0 +1,4481 @@
+{
+  "schema": "fsdh-yolo-android-bench\/1",
+  "device": {
+    "manufacturer": "Xiaomi",
+    "model": "M2012K10C",
+    "device": "ares",
+    "soc": "MT6893",
+    "hardware": "mt6893",
+    "androidRelease": "13",
+    "sdkInt": "33",
+    "supportedAbis": "arm64-v8a,armeabi-v7a,armeabi"
+  },
+  "params": {
+    "confThreshold": 0.25,
+    "iouThreshold": 0.44999998807907104,
+    "maxDetections": 300,
+    "classAwareNms": true
+  },
+  "input": {
+    "frames": 12,
+    "width": 480,
+    "height": 640
+  },
+  "rounds": 4,
+  "thermal": [
+    "round0 before=NONE after=NONE waitedMs=0",
+    "round1 before=NONE after=NONE waitedMs=1",
+    "round2 before=NONE after=NONE waitedMs=0",
+    "round3 before=NONE after=NONE waitedMs=1"
+  ],
+  "methodology": {
+    "headline": "end-to-end only; pre\/infer\/post recorded for diagnosis",
+    "ordering": "engine order rotated every round to spread thermal drift",
+    "coldStart": "round 0 reported but excluded from dropFirst* figures",
+    "thermal": "each round waits until the SoC reports at most LIGHT throttling; see the thermal array for the per-round status"
+  },
+  "samples": [
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 132.00584600000002,
+      "preMs": 3.819693,
+      "inferMs": 127.763,
+      "postMs": 0.423153,
+      "detections": 29
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 142.63115399999998,
+      "preMs": 3.941231,
+      "inferMs": 138.279077,
+      "postMs": 0.410846,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 116.288615,
+      "preMs": 3.820077,
+      "inferMs": 112.117769,
+      "postMs": 0.350769,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 115.46638499999999,
+      "preMs": 3.920847,
+      "inferMs": 111.082461,
+      "postMs": 0.463077,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 138.032846,
+      "preMs": 4.469538,
+      "inferMs": 133.025462,
+      "postMs": 0.537846,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 146.97899999999998,
+      "preMs": 5.367615,
+      "inferMs": 141.127154,
+      "postMs": 0.484231,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 135.076692,
+      "preMs": 4.729,
+      "inferMs": 129.777539,
+      "postMs": 0.570153,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 136.45792300000002,
+      "preMs": 4.954846,
+      "inferMs": 130.823923,
+      "postMs": 0.679154,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 141.241231,
+      "preMs": 4.704923,
+      "inferMs": 136.029308,
+      "postMs": 0.507,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 140.936846,
+      "preMs": 4.756846,
+      "inferMs": 135.740308,
+      "postMs": 0.439692,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 158.86930700000002,
+      "preMs": 4.717923,
+      "inferMs": 153.68923,
+      "postMs": 0.462154,
+      "detections": 28
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 158.763077,
+      "preMs": 4.936846,
+      "inferMs": 153.340384,
+      "postMs": 0.485847,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 216.301462,
+      "preMs": 5.022462,
+      "inferMs": 210.791307,
+      "postMs": 0.487693,
+      "detections": 29
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 195.24246200000002,
+      "preMs": 4.975769,
+      "inferMs": 189.770154,
+      "postMs": 0.496539,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 225.892692,
+      "preMs": 4.789923,
+      "inferMs": 220.677769,
+      "postMs": 0.425,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 217.873538,
+      "preMs": 5.059461,
+      "inferMs": 212.338693,
+      "postMs": 0.475384,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 212.904923,
+      "preMs": 5.791615,
+      "inferMs": 206.631769,
+      "postMs": 0.481539,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 205.956385,
+      "preMs": 5.966769,
+      "inferMs": 199.503769,
+      "postMs": 0.485847,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 212.44376900000003,
+      "preMs": 5.294846,
+      "inferMs": 206.593846,
+      "postMs": 0.555077,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 223.068616,
+      "preMs": 5.196077,
+      "inferMs": 217.042769,
+      "postMs": 0.82977,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 194.672077,
+      "preMs": 5.054231,
+      "inferMs": 189.032308,
+      "postMs": 0.585538,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 226.197,
+      "preMs": 5.396616,
+      "inferMs": 218.989923,
+      "postMs": 1.810461,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 198.056,
+      "preMs": 7.569308,
+      "inferMs": 189.978077,
+      "postMs": 0.508615,
+      "detections": 28
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 203.815692,
+      "preMs": 5.406076,
+      "inferMs": 197.913847,
+      "postMs": 0.495769,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 377.407308,
+      "preMs": 5.10577,
+      "inferMs": 372.128076,
+      "postMs": 0.173462,
+      "detections": 21
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 352.396924,
+      "preMs": 3.854385,
+      "inferMs": 348.357,
+      "postMs": 0.185539,
+      "detections": 20
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 335.617539,
+      "preMs": 3.795616,
+      "inferMs": 331.709538,
+      "postMs": 0.112385,
+      "detections": 1
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 313.83238500000004,
+      "preMs": 3.711154,
+      "inferMs": 309.979615,
+      "postMs": 0.141616,
+      "detections": 14
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 304.838461,
+      "preMs": 3.736615,
+      "inferMs": 300.976923,
+      "postMs": 0.124923,
+      "detections": 8
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 307.193769,
+      "preMs": 4.143,
+      "inferMs": 302.911692,
+      "postMs": 0.139077,
+      "detections": 13
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 307.89323099999996,
+      "preMs": 3.937846,
+      "inferMs": 303.829231,
+      "postMs": 0.126154,
+      "detections": 8
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 312.01723100000004,
+      "preMs": 3.713,
+      "inferMs": 308.14677,
+      "postMs": 0.157461,
+      "detections": 12
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 310.45546199999995,
+      "preMs": 3.901615,
+      "inferMs": 306.412923,
+      "postMs": 0.140924,
+      "detections": 13
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 310.345231,
+      "preMs": 3.720923,
+      "inferMs": 306.511077,
+      "postMs": 0.113231,
+      "detections": 5
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 312.670231,
+      "preMs": 3.934231,
+      "inferMs": 308.587923,
+      "postMs": 0.148077,
+      "detections": 4
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 311.551692,
+      "preMs": 3.694153,
+      "inferMs": 307.74577,
+      "postMs": 0.111769,
+      "detections": 1
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 329.95599999999996,
+      "preMs": 3.932846,
+      "inferMs": 325.593616,
+      "postMs": 0.429538,
+      "detections": 29
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 331.559615,
+      "preMs": 4.004846,
+      "inferMs": 327.157846,
+      "postMs": 0.396923,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 330.418539,
+      "preMs": 3.893924,
+      "inferMs": 326.139,
+      "postMs": 0.385615,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 331.24561500000004,
+      "preMs": 4.124615,
+      "inferMs": 326.733308,
+      "postMs": 0.387692,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 329.42769300000003,
+      "preMs": 3.925539,
+      "inferMs": 325.070692,
+      "postMs": 0.431462,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 675.702461,
+      "preMs": 3.958077,
+      "inferMs": 670.56923,
+      "postMs": 1.175154,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 895.288308,
+      "preMs": 10.714692,
+      "inferMs": 883.872077,
+      "postMs": 0.701539,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 829.132846,
+      "preMs": 6.741461,
+      "inferMs": 821.247692,
+      "postMs": 1.143693,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 954.2156150000001,
+      "preMs": 10.828846,
+      "inferMs": 942.055154,
+      "postMs": 1.331615,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 937.8914619999999,
+      "preMs": 11.030846,
+      "inferMs": 925.894693,
+      "postMs": 0.965923,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 1030.0680770000001,
+      "preMs": 11.013231,
+      "inferMs": 1017.980308,
+      "postMs": 1.074538,
+      "detections": 28
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 1016.774154,
+      "preMs": 10.905231,
+      "inferMs": 1004.494077,
+      "postMs": 1.374846,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 564.815385,
+      "preMs": 14.626154,
+      "inferMs": 549.747769,
+      "postMs": 0.441462,
+      "detections": 29
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 353.207077,
+      "preMs": 4.213462,
+      "inferMs": 348.415384,
+      "postMs": 0.578231,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 425.863461,
+      "preMs": 6.795769,
+      "inferMs": 418.575384,
+      "postMs": 0.492308,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 406.09176900000006,
+      "preMs": 6.505846,
+      "inferMs": 399.005846,
+      "postMs": 0.580077,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 640.737231,
+      "preMs": 5.781846,
+      "inferMs": 633.891077,
+      "postMs": 1.064308,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 683.899384,
+      "preMs": 11.023077,
+      "inferMs": 671.903307,
+      "postMs": 0.973,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 703.916077,
+      "preMs": 10.766538,
+      "inferMs": 692.069846,
+      "postMs": 1.079693,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 701.244923,
+      "preMs": 10.895077,
+      "inferMs": 689.324308,
+      "postMs": 1.025538,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 725.309769,
+      "preMs": 10.949154,
+      "inferMs": 713.166846,
+      "postMs": 1.193769,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 691.3640770000001,
+      "preMs": 11.353846,
+      "inferMs": 679.039154,
+      "postMs": 0.971077,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 686.2716919999999,
+      "preMs": 10.939615,
+      "inferMs": 674.255154,
+      "postMs": 1.076923,
+      "detections": 28
+    },
+    {
+      "round": 0,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 694.7907690000001,
+      "preMs": 11.08,
+      "inferMs": 682.394769,
+      "postMs": 1.316,
+      "detections": 27
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 225.06676899999997,
+      "preMs": 14.165846,
+      "inferMs": 210.552846,
+      "postMs": 0.348077,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 135.16923100000002,
+      "preMs": 4.484846,
+      "inferMs": 130.268615,
+      "postMs": 0.41577,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 168.379923,
+      "preMs": 4.435693,
+      "inferMs": 162.311,
+      "postMs": 1.63323,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 157.285,
+      "preMs": 5.601308,
+      "inferMs": 151.272308,
+      "postMs": 0.411384,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 150.194154,
+      "preMs": 4.859693,
+      "inferMs": 144.94,
+      "postMs": 0.394461,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 129.782462,
+      "preMs": 5.465846,
+      "inferMs": 123.916923,
+      "postMs": 0.399693,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.26484699999999,
+      "preMs": 4.488847,
+      "inferMs": 119.298846,
+      "postMs": 0.477154,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 119.714462,
+      "preMs": 4.8,
+      "inferMs": 114.506077,
+      "postMs": 0.408385,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 118.69877000000001,
+      "preMs": 4.436924,
+      "inferMs": 113.865615,
+      "postMs": 0.396231,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 115.167615,
+      "preMs": 4.327,
+      "inferMs": 110.393231,
+      "postMs": 0.447384,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 110.06023,
+      "preMs": 4.255077,
+      "inferMs": 105.410461,
+      "postMs": 0.394692,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 111.414539,
+      "preMs": 4.884,
+      "inferMs": 106.154154,
+      "postMs": 0.376385,
+      "detections": 21
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 168.466846,
+      "preMs": 4.580307,
+      "inferMs": 163.492923,
+      "postMs": 0.393616,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 157.607692,
+      "preMs": 5.884,
+      "inferMs": 151.184385,
+      "postMs": 0.539307,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 153.565539,
+      "preMs": 5.183923,
+      "inferMs": 147.954462,
+      "postMs": 0.427154,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 160.689538,
+      "preMs": 4.791,
+      "inferMs": 155.444615,
+      "postMs": 0.453923,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 165.770462,
+      "preMs": 5.672616,
+      "inferMs": 158.137769,
+      "postMs": 1.960077,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 167.61969200000001,
+      "preMs": 6.487692,
+      "inferMs": 160.638769,
+      "postMs": 0.493231,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 161.52822999999998,
+      "preMs": 4.850384,
+      "inferMs": 156.205308,
+      "postMs": 0.472538,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 162.111385,
+      "preMs": 5.582077,
+      "inferMs": 156.062462,
+      "postMs": 0.466846,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 156.292923,
+      "preMs": 5.596,
+      "inferMs": 150.108384,
+      "postMs": 0.588539,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 173.73823099999998,
+      "preMs": 5.322846,
+      "inferMs": 167.967693,
+      "postMs": 0.447692,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 167.00246099999998,
+      "preMs": 4.884615,
+      "inferMs": 161.668615,
+      "postMs": 0.449231,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 148.84207700000002,
+      "preMs": 5.36,
+      "inferMs": 143.017538,
+      "postMs": 0.464539,
+      "detections": 21
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 348.914154,
+      "preMs": 5.321154,
+      "inferMs": 307.876615,
+      "postMs": 35.716385,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 335.492923,
+      "preMs": 3.762154,
+      "inferMs": 295.901615,
+      "postMs": 35.829154,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 313.310154,
+      "preMs": 3.72,
+      "inferMs": 273.797539,
+      "postMs": 35.792615,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 299.491462,
+      "preMs": 3.851154,
+      "inferMs": 267.056538,
+      "postMs": 28.58377,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 299.86492300000003,
+      "preMs": 3.732615,
+      "inferMs": 266.306462,
+      "postMs": 29.825846,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 298.326539,
+      "preMs": 3.879154,
+      "inferMs": 261.60577,
+      "postMs": 32.841615,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 296.729923,
+      "preMs": 3.688923,
+      "inferMs": 260.629846,
+      "postMs": 32.411154,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 307.51261500000004,
+      "preMs": 4.054385,
+      "inferMs": 273.754769,
+      "postMs": 29.703461,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 307.499616,
+      "preMs": 3.931693,
+      "inferMs": 270.932,
+      "postMs": 32.635923,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 307.05992299999997,
+      "preMs": 3.822077,
+      "inferMs": 271.919462,
+      "postMs": 31.318384,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 294.798538,
+      "preMs": 3.94923,
+      "inferMs": 270.262154,
+      "postMs": 20.587154,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 298.86223099999995,
+      "preMs": 3.825231,
+      "inferMs": 268.512923,
+      "postMs": 26.524077,
+      "detections": 300
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 290.090769,
+      "preMs": 3.875692,
+      "inferMs": 285.896923,
+      "postMs": 0.318154,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 281.80453800000004,
+      "preMs": 4.158154,
+      "inferMs": 277.30923,
+      "postMs": 0.337154,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 287.910692,
+      "preMs": 3.993769,
+      "inferMs": 283.592077,
+      "postMs": 0.324846,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 281.82392300000004,
+      "preMs": 4.089846,
+      "inferMs": 277.392,
+      "postMs": 0.342077,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 291.07692299999997,
+      "preMs": 4.013538,
+      "inferMs": 286.730847,
+      "postMs": 0.332538,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 285.858769,
+      "preMs": 4.017846,
+      "inferMs": 281.507769,
+      "postMs": 0.333154,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 290.68653800000004,
+      "preMs": 4.085846,
+      "inferMs": 286.249,
+      "postMs": 0.351692,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 295.823077,
+      "preMs": 4.005231,
+      "inferMs": 291.386384,
+      "postMs": 0.431462,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 271.70376899999997,
+      "preMs": 4.428615,
+      "inferMs": 266.943769,
+      "postMs": 0.331385,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 274.295308,
+      "preMs": 3.832,
+      "inferMs": 270.134692,
+      "postMs": 0.328616,
+      "detections": 26
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 283.827153,
+      "preMs": 3.763692,
+      "inferMs": 279.713615,
+      "postMs": 0.349846,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 290.471923,
+      "preMs": 4.300923,
+      "inferMs": 285.840538,
+      "postMs": 0.330462,
+      "detections": 21
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 152.331693,
+      "preMs": 4.504,
+      "inferMs": 146.594077,
+      "postMs": 1.233616,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 144.43930799999998,
+      "preMs": 4.466154,
+      "inferMs": 139.503307,
+      "postMs": 0.469847,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 130.956693,
+      "preMs": 5.458154,
+      "inferMs": 125.182539,
+      "postMs": 0.316,
+      "detections": 19
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 110.63661499999999,
+      "preMs": 4.603692,
+      "inferMs": 105.646154,
+      "postMs": 0.386769,
+      "detections": 21
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 102.044693,
+      "preMs": 4.063385,
+      "inferMs": 97.427077,
+      "postMs": 0.554231,
+      "detections": 25
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 107.995385,
+      "preMs": 4.176692,
+      "inferMs": 103.140924,
+      "postMs": 0.677769,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 165.25753799999998,
+      "preMs": 4.694154,
+      "inferMs": 160.091692,
+      "postMs": 0.471692,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 114.78777000000001,
+      "preMs": 4.220616,
+      "inferMs": 109.968615,
+      "postMs": 0.598539,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 119.04438499999999,
+      "preMs": 6.699154,
+      "inferMs": 111.856,
+      "postMs": 0.489231,
+      "detections": 24
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 174.124308,
+      "preMs": 4.322154,
+      "inferMs": 169.308923,
+      "postMs": 0.493231,
+      "detections": 22
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 123.188077,
+      "preMs": 4.453,
+      "inferMs": 118.303077,
+      "postMs": 0.432,
+      "detections": 23
+    },
+    {
+      "round": 0,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 130.831384,
+      "preMs": 4.428615,
+      "inferMs": 126.031692,
+      "postMs": 0.371077,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 188.525846,
+      "preMs": 13.286846,
+      "inferMs": 174.840308,
+      "postMs": 0.398692,
+      "detections": 29
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 174.365231,
+      "preMs": 4.856077,
+      "inferMs": 169.156923,
+      "postMs": 0.352231,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 181.44053799999998,
+      "preMs": 4.409846,
+      "inferMs": 176.687077,
+      "postMs": 0.343615,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 174.76646200000002,
+      "preMs": 4.803154,
+      "inferMs": 169.600231,
+      "postMs": 0.363077,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 200.572231,
+      "preMs": 4.985154,
+      "inferMs": 195.096692,
+      "postMs": 0.490385,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 224.52607700000002,
+      "preMs": 5.623615,
+      "inferMs": 218.513846,
+      "postMs": 0.388616,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 195.660385,
+      "preMs": 4.918231,
+      "inferMs": 190.307923,
+      "postMs": 0.434231,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 210.44646200000003,
+      "preMs": 5.039692,
+      "inferMs": 204.931001,
+      "postMs": 0.475769,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 204.894385,
+      "preMs": 6.460538,
+      "inferMs": 197.961,
+      "postMs": 0.472847,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 195.39600000000002,
+      "preMs": 5.582154,
+      "inferMs": 189.390846,
+      "postMs": 0.423,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 223.663616,
+      "preMs": 5.604616,
+      "inferMs": 217.559384,
+      "postMs": 0.499616,
+      "detections": 28
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 205.483077,
+      "preMs": 5.084615,
+      "inferMs": 199.982539,
+      "postMs": 0.415923,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 374.331692,
+      "preMs": 5.543769,
+      "inferMs": 368.624846,
+      "postMs": 0.163077,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 356.69261600000004,
+      "preMs": 3.933539,
+      "inferMs": 352.539077,
+      "postMs": 0.22,
+      "detections": 20
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 312.745924,
+      "preMs": 4.716308,
+      "inferMs": 307.925616,
+      "postMs": 0.104,
+      "detections": 1
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 313.200307,
+      "preMs": 3.755153,
+      "inferMs": 309.288923,
+      "postMs": 0.156231,
+      "detections": 14
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 310.97100000000006,
+      "preMs": 3.723692,
+      "inferMs": 307.124,
+      "postMs": 0.123308,
+      "detections": 8
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 313.61569199999997,
+      "preMs": 3.739461,
+      "inferMs": 309.761847,
+      "postMs": 0.114384,
+      "detections": 13
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 311.729539,
+      "preMs": 3.684693,
+      "inferMs": 307.927077,
+      "postMs": 0.117769,
+      "detections": 8
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 313.937154,
+      "preMs": 3.69877,
+      "inferMs": 310.100307,
+      "postMs": 0.138077,
+      "detections": 12
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 311.157539,
+      "preMs": 3.709769,
+      "inferMs": 307.316308,
+      "postMs": 0.131462,
+      "detections": 13
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 312.738692,
+      "preMs": 4.328846,
+      "inferMs": 308.29977,
+      "postMs": 0.110076,
+      "detections": 5
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 312.732693,
+      "preMs": 3.89477,
+      "inferMs": 308.728077,
+      "postMs": 0.109846,
+      "detections": 4
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 314.86215400000003,
+      "preMs": 3.877231,
+      "inferMs": 310.877923,
+      "postMs": 0.107,
+      "detections": 1
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 331.22892299999995,
+      "preMs": 4.38277,
+      "inferMs": 326.488077,
+      "postMs": 0.358076,
+      "detections": 29
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 331.294154,
+      "preMs": 4.497154,
+      "inferMs": 326.473308,
+      "postMs": 0.323692,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 330.60238499999997,
+      "preMs": 3.908615,
+      "inferMs": 326.397154,
+      "postMs": 0.296616,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 333.259385,
+      "preMs": 3.843077,
+      "inferMs": 329.079308,
+      "postMs": 0.337,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 331.324,
+      "preMs": 3.899769,
+      "inferMs": 327.070154,
+      "postMs": 0.354077,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 343.6326159999999,
+      "preMs": 3.864,
+      "inferMs": 339.45077,
+      "postMs": 0.317846,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 365.056308,
+      "preMs": 4.126154,
+      "inferMs": 360.564538,
+      "postMs": 0.365616,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 336.23292299999997,
+      "preMs": 4.649231,
+      "inferMs": 331.222692,
+      "postMs": 0.361,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 374.434692,
+      "preMs": 4.450076,
+      "inferMs": 369.628924,
+      "postMs": 0.355692,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 340.490769,
+      "preMs": 4.452615,
+      "inferMs": 335.737539,
+      "postMs": 0.300615,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 355.606538,
+      "preMs": 4.159769,
+      "inferMs": 351.070077,
+      "postMs": 0.376692,
+      "detections": 28
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 339.14561599999996,
+      "preMs": 4.625923,
+      "inferMs": 334.195616,
+      "postMs": 0.324077,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 284.10346200000004,
+      "preMs": 4.401539,
+      "inferMs": 279.288923,
+      "postMs": 0.413,
+      "detections": 29
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 269.484307,
+      "preMs": 4.218384,
+      "inferMs": 264.888923,
+      "postMs": 0.377,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 273.029538,
+      "preMs": 4.017153,
+      "inferMs": 268.73077,
+      "postMs": 0.281615,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 268.120308,
+      "preMs": 3.801847,
+      "inferMs": 263.980923,
+      "postMs": 0.337538,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 275.444,
+      "preMs": 4.249846,
+      "inferMs": 270.879,
+      "postMs": 0.315154,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 282.663154,
+      "preMs": 4.234231,
+      "inferMs": 278.056846,
+      "postMs": 0.372077,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 295.252615,
+      "preMs": 4.558538,
+      "inferMs": 290.341769,
+      "postMs": 0.352308,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 299.814539,
+      "preMs": 5.210846,
+      "inferMs": 294.287308,
+      "postMs": 0.316385,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 302.08123,
+      "preMs": 4.184077,
+      "inferMs": 297.518692,
+      "postMs": 0.378461,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 291.377154,
+      "preMs": 4.630769,
+      "inferMs": 286.402077,
+      "postMs": 0.344308,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 284.150539,
+      "preMs": 4.286462,
+      "inferMs": 279.498769,
+      "postMs": 0.365308,
+      "detections": 28
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 287.134693,
+      "preMs": 4.366462,
+      "inferMs": 282.436846,
+      "postMs": 0.331385,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 132.855693,
+      "preMs": 3.984308,
+      "inferMs": 128.356538,
+      "postMs": 0.514847,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 115.38000000000001,
+      "preMs": 5.261846,
+      "inferMs": 109.743615,
+      "postMs": 0.374539,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.900616,
+      "preMs": 4.611077,
+      "inferMs": 119.927385,
+      "postMs": 0.362154,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 118.654461,
+      "preMs": 4.586461,
+      "inferMs": 113.724385,
+      "postMs": 0.343615,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 120.973769,
+      "preMs": 4.738077,
+      "inferMs": 115.818154,
+      "postMs": 0.417538,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 120.278385,
+      "preMs": 4.338385,
+      "inferMs": 115.525846,
+      "postMs": 0.414154,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 130.737,
+      "preMs": 4.743076,
+      "inferMs": 125.634539,
+      "postMs": 0.359385,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.843462,
+      "preMs": 4.666769,
+      "inferMs": 119.782231,
+      "postMs": 0.394462,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 139.13053799999997,
+      "preMs": 4.896923,
+      "inferMs": 133.795461,
+      "postMs": 0.438154,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 133.032923,
+      "preMs": 5.131923,
+      "inferMs": 127.395384,
+      "postMs": 0.505616,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 141.48461500000002,
+      "preMs": 4.965538,
+      "inferMs": 136.076308,
+      "postMs": 0.442769,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 127.83423099999999,
+      "preMs": 5.261,
+      "inferMs": 122.157462,
+      "postMs": 0.415769,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 161.683308,
+      "preMs": 5.037847,
+      "inferMs": 156.199923,
+      "postMs": 0.445538,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 173.05977000000001,
+      "preMs": 5.136693,
+      "inferMs": 167.525461,
+      "postMs": 0.397616,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 161.535693,
+      "preMs": 5.091,
+      "inferMs": 156.052077,
+      "postMs": 0.392616,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 162.221847,
+      "preMs": 5.375923,
+      "inferMs": 156.279693,
+      "postMs": 0.566231,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 174.756539,
+      "preMs": 5.315077,
+      "inferMs": 169.015693,
+      "postMs": 0.425769,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 174.220923,
+      "preMs": 5.537153,
+      "inferMs": 168.062462,
+      "postMs": 0.621308,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 184.58953799999998,
+      "preMs": 4.924615,
+      "inferMs": 177.840231,
+      "postMs": 1.824692,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 178.79692299999996,
+      "preMs": 7.673231,
+      "inferMs": 170.662154,
+      "postMs": 0.461538,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 165.519923,
+      "preMs": 6.051615,
+      "inferMs": 159.008385,
+      "postMs": 0.459923,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 175.729846,
+      "preMs": 5.033231,
+      "inferMs": 170.261,
+      "postMs": 0.435615,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 176.48184600000002,
+      "preMs": 5.336693,
+      "inferMs": 170.741846,
+      "postMs": 0.403307,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 180.48092300000002,
+      "preMs": 5.512,
+      "inferMs": 174.610385,
+      "postMs": 0.358538,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 346.454462,
+      "preMs": 5.188385,
+      "inferMs": 306.898692,
+      "postMs": 34.367385,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 335.237846,
+      "preMs": 3.772,
+      "inferMs": 297.117846,
+      "postMs": 34.348,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 355.41661600000003,
+      "preMs": 4.134693,
+      "inferMs": 314.507769,
+      "postMs": 36.774154,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 320.059692,
+      "preMs": 4.032307,
+      "inferMs": 285.977308,
+      "postMs": 30.050077,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 316.612923,
+      "preMs": 4.066154,
+      "inferMs": 282.42423,
+      "postMs": 30.122539,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 324.981462,
+      "preMs": 3.882462,
+      "inferMs": 285.476846,
+      "postMs": 35.622154,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 317.364,
+      "preMs": 4.198154,
+      "inferMs": 278.923384,
+      "postMs": 34.242462,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 314.392384,
+      "preMs": 4.054154,
+      "inferMs": 279.677538,
+      "postMs": 30.660692,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 335.800077,
+      "preMs": 3.932077,
+      "inferMs": 297.065231,
+      "postMs": 34.802769,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 338.58984599999997,
+      "preMs": 4.196846,
+      "inferMs": 299.846231,
+      "postMs": 34.546769,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 322.877923,
+      "preMs": 4.270461,
+      "inferMs": 295.624616,
+      "postMs": 22.982846,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 333.540539,
+      "preMs": 4.154692,
+      "inferMs": 299.009231,
+      "postMs": 30.376616,
+      "detections": 300
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 314.209308,
+      "preMs": 4.339462,
+      "inferMs": 309.523385,
+      "postMs": 0.346461,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 313.25346099999996,
+      "preMs": 4.343307,
+      "inferMs": 308.549847,
+      "postMs": 0.360307,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 314.249847,
+      "preMs": 4.304923,
+      "inferMs": 309.620308,
+      "postMs": 0.324616,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 313.868308,
+      "preMs": 4.294154,
+      "inferMs": 309.194385,
+      "postMs": 0.379769,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 314.843385,
+      "preMs": 4.429231,
+      "inferMs": 310.027693,
+      "postMs": 0.386461,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 340.620077,
+      "preMs": 4.513,
+      "inferMs": 335.649769,
+      "postMs": 0.457308,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 380.221231,
+      "preMs": 5.525846,
+      "inferMs": 374.139077,
+      "postMs": 0.556308,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 352.779692,
+      "preMs": 5.870692,
+      "inferMs": 346.415385,
+      "postMs": 0.493615,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 359.362154,
+      "preMs": 5.733231,
+      "inferMs": 353.239692,
+      "postMs": 0.389231,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 352.37138500000003,
+      "preMs": 4.916385,
+      "inferMs": 347.041846,
+      "postMs": 0.413154,
+      "detections": 26
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 352.396923,
+      "preMs": 5.277462,
+      "inferMs": 346.707692,
+      "postMs": 0.411769,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 339.465154,
+      "preMs": 5.186462,
+      "inferMs": 333.867307,
+      "postMs": 0.411385,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.39853799999999,
+      "preMs": 5.756307,
+      "inferMs": 111.18677,
+      "postMs": 0.455461,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.230154,
+      "preMs": 5.509846,
+      "inferMs": 111.196077,
+      "postMs": 0.524231,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.172077,
+      "preMs": 5.077539,
+      "inferMs": 111.620615,
+      "postMs": 0.473923,
+      "detections": 19
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 121.018154,
+      "preMs": 5.136,
+      "inferMs": 115.36277,
+      "postMs": 0.519384,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 123.487924,
+      "preMs": 5.291308,
+      "inferMs": 117.481846,
+      "postMs": 0.71477,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 124.54461500000001,
+      "preMs": 5.405846,
+      "inferMs": 118.659692,
+      "postMs": 0.479077,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 124.65346100000001,
+      "preMs": 5.413461,
+      "inferMs": 118.472616,
+      "postMs": 0.767384,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 128.133231,
+      "preMs": 5.143385,
+      "inferMs": 122.444308,
+      "postMs": 0.545538,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 133.12576900000002,
+      "preMs": 5.062154,
+      "inferMs": 127.621153,
+      "postMs": 0.442462,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 128.247462,
+      "preMs": 5.270539,
+      "inferMs": 122.472538,
+      "postMs": 0.504385,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 127.675462,
+      "preMs": 4.744385,
+      "inferMs": 122.429231,
+      "postMs": 0.501846,
+      "detections": 23
+    },
+    {
+      "round": 1,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 129.042231,
+      "preMs": 4.962231,
+      "inferMs": 123.668231,
+      "postMs": 0.411769,
+      "detections": 21
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 154.62984600000001,
+      "preMs": 5.023308,
+      "inferMs": 149.206846,
+      "postMs": 0.399692,
+      "detections": 29
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 154.23946099999998,
+      "preMs": 5.229538,
+      "inferMs": 148.647077,
+      "postMs": 0.362846,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 160.660616,
+      "preMs": 4.830769,
+      "inferMs": 155.494231,
+      "postMs": 0.335616,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 159.337461,
+      "preMs": 4.767,
+      "inferMs": 154.17023,
+      "postMs": 0.400231,
+      "detections": 25
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 148.855077,
+      "preMs": 5.333231,
+      "inferMs": 143.114693,
+      "postMs": 0.407153,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 154.06246099999998,
+      "preMs": 5.360077,
+      "inferMs": 148.344,
+      "postMs": 0.358384,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 151.013923,
+      "preMs": 5.194462,
+      "inferMs": 145.422154,
+      "postMs": 0.397307,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 152.673154,
+      "preMs": 4.993538,
+      "inferMs": 147.290077,
+      "postMs": 0.389539,
+      "detections": 24
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 153.01261499999998,
+      "preMs": 5.382769,
+      "inferMs": 147.168308,
+      "postMs": 0.461538,
+      "detections": 27
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 152.14246200000002,
+      "preMs": 5.003923,
+      "inferMs": 146.80677,
+      "postMs": 0.331769,
+      "detections": 22
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 154.674461,
+      "preMs": 5.819461,
+      "inferMs": 148.354462,
+      "postMs": 0.500538,
+      "detections": 28
+    },
+    {
+      "round": 1,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 151.401307,
+      "preMs": 5.527692,
+      "inferMs": 145.428923,
+      "postMs": 0.444692,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 356.236307,
+      "preMs": 4.723153,
+      "inferMs": 351.336616,
+      "postMs": 0.176538,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 339.27846099999994,
+      "preMs": 4.204846,
+      "inferMs": 334.930461,
+      "postMs": 0.143154,
+      "detections": 20
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 348.56122999999997,
+      "preMs": 4.173,
+      "inferMs": 344.268923,
+      "postMs": 0.119307,
+      "detections": 1
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 341.098538,
+      "preMs": 4.255692,
+      "inferMs": 336.707385,
+      "postMs": 0.135461,
+      "detections": 14
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 349.485769,
+      "preMs": 4.14423,
+      "inferMs": 345.209924,
+      "postMs": 0.131615,
+      "detections": 8
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 349.321923,
+      "preMs": 4.224693,
+      "inferMs": 344.963615,
+      "postMs": 0.133615,
+      "detections": 13
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 343.753615,
+      "preMs": 4.295769,
+      "inferMs": 339.331077,
+      "postMs": 0.126769,
+      "detections": 8
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 352.59530799999993,
+      "preMs": 4.162385,
+      "inferMs": 348.277,
+      "postMs": 0.155923,
+      "detections": 12
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 343.18023100000005,
+      "preMs": 4.339692,
+      "inferMs": 338.698077,
+      "postMs": 0.142462,
+      "detections": 13
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 340.68438499999996,
+      "preMs": 4.194462,
+      "inferMs": 336.368384,
+      "postMs": 0.121539,
+      "detections": 5
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 340.277231,
+      "preMs": 4.33077,
+      "inferMs": 335.827769,
+      "postMs": 0.118692,
+      "detections": 4
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 340.602231,
+      "preMs": 4.597616,
+      "inferMs": 335.898154,
+      "postMs": 0.106461,
+      "detections": 1
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 371.553769,
+      "preMs": 4.319923,
+      "inferMs": 366.849923,
+      "postMs": 0.383923,
+      "detections": 29
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 371.54553799999996,
+      "preMs": 4.352538,
+      "inferMs": 366.840077,
+      "postMs": 0.352923,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 370.30438499999997,
+      "preMs": 4.308308,
+      "inferMs": 365.675461,
+      "postMs": 0.320616,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 371.05253899999997,
+      "preMs": 4.38577,
+      "inferMs": 366.301846,
+      "postMs": 0.364923,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 384.16246199999995,
+      "preMs": 4.510385,
+      "inferMs": 379.238461,
+      "postMs": 0.413616,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 451.98923,
+      "preMs": 6.065538,
+      "inferMs": 445.502154,
+      "postMs": 0.421538,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 461.067923,
+      "preMs": 6.007692,
+      "inferMs": 454.373769,
+      "postMs": 0.686462,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 432.305231,
+      "preMs": 5.846384,
+      "inferMs": 426.06777,
+      "postMs": 0.391077,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 443.372615,
+      "preMs": 5.434538,
+      "inferMs": 437.485154,
+      "postMs": 0.452923,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 430.494769,
+      "preMs": 5.565231,
+      "inferMs": 424.558846,
+      "postMs": 0.370692,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 425.125615,
+      "preMs": 5.259461,
+      "inferMs": 419.406462,
+      "postMs": 0.459692,
+      "detections": 28
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 435.54646199999996,
+      "preMs": 5.147923,
+      "inferMs": 429.972385,
+      "postMs": 0.426154,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 320.46500000000003,
+      "preMs": 5.557539,
+      "inferMs": 314.494461,
+      "postMs": 0.413,
+      "detections": 29
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 321.351077,
+      "preMs": 4.883385,
+      "inferMs": 316.097846,
+      "postMs": 0.369846,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 333.593231,
+      "preMs": 5.058231,
+      "inferMs": 328.206769,
+      "postMs": 0.328231,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 321.812385,
+      "preMs": 4.747154,
+      "inferMs": 316.695,
+      "postMs": 0.370231,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 328.695615,
+      "preMs": 4.594769,
+      "inferMs": 323.704923,
+      "postMs": 0.395923,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 318.859693,
+      "preMs": 4.905923,
+      "inferMs": 313.379923,
+      "postMs": 0.573847,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 344.018461,
+      "preMs": 4.647077,
+      "inferMs": 338.965461,
+      "postMs": 0.405923,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 346.986539,
+      "preMs": 4.807077,
+      "inferMs": 341.753923,
+      "postMs": 0.425539,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 329.18023100000005,
+      "preMs": 5.623616,
+      "inferMs": 323.126846,
+      "postMs": 0.429769,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 355.077,
+      "preMs": 5.847077,
+      "inferMs": 348.824077,
+      "postMs": 0.405846,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 331.11684599999995,
+      "preMs": 4.909231,
+      "inferMs": 325.803384,
+      "postMs": 0.404231,
+      "detections": 28
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 348.993538,
+      "preMs": 5.843077,
+      "inferMs": 342.665846,
+      "postMs": 0.484615,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 126.98246200000001,
+      "preMs": 5.305846,
+      "inferMs": 121.28377,
+      "postMs": 0.392846,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 125.27477,
+      "preMs": 5.464308,
+      "inferMs": 119.392615,
+      "postMs": 0.417847,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 129.042462,
+      "preMs": 5.639769,
+      "inferMs": 123.016616,
+      "postMs": 0.386077,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.845539,
+      "preMs": 5.574231,
+      "inferMs": 118.892846,
+      "postMs": 0.378462,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 130.33053900000002,
+      "preMs": 5.432308,
+      "inferMs": 124.480692,
+      "postMs": 0.417539,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 134.00369200000003,
+      "preMs": 5.255692,
+      "inferMs": 128.379308,
+      "postMs": 0.368692,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 132.508077,
+      "preMs": 5.368615,
+      "inferMs": 126.735077,
+      "postMs": 0.404385,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.72338500000001,
+      "preMs": 5.117923,
+      "inferMs": 119.118385,
+      "postMs": 0.487077,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.518846,
+      "preMs": 5.192307,
+      "inferMs": 118.916,
+      "postMs": 0.410539,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 130.007692,
+      "preMs": 4.988692,
+      "inferMs": 124.622693,
+      "postMs": 0.396307,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 152.11261499999998,
+      "preMs": 4.823692,
+      "inferMs": 146.935385,
+      "postMs": 0.353538,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 134.53284599999998,
+      "preMs": 4.832846,
+      "inferMs": 129.323154,
+      "postMs": 0.376846,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 169.998846,
+      "preMs": 5.244615,
+      "inferMs": 164.251693,
+      "postMs": 0.502538,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 168.18184599999998,
+      "preMs": 4.924,
+      "inferMs": 162.863692,
+      "postMs": 0.394154,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 179.057615,
+      "preMs": 4.964077,
+      "inferMs": 173.734692,
+      "postMs": 0.358846,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 166.889231,
+      "preMs": 6.618231,
+      "inferMs": 159.920616,
+      "postMs": 0.350384,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 184.402769,
+      "preMs": 5.175923,
+      "inferMs": 178.799461,
+      "postMs": 0.427385,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 172.928,
+      "preMs": 4.802461,
+      "inferMs": 167.725615,
+      "postMs": 0.399924,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 161.814692,
+      "preMs": 5.719615,
+      "inferMs": 155.686462,
+      "postMs": 0.408615,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 157.316924,
+      "preMs": 4.630154,
+      "inferMs": 152.308923,
+      "postMs": 0.377847,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 165.629308,
+      "preMs": 4.949308,
+      "inferMs": 159.327077,
+      "postMs": 1.352923,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 158.788307,
+      "preMs": 5.032692,
+      "inferMs": 153.334384,
+      "postMs": 0.421231,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 176.242153,
+      "preMs": 5.010077,
+      "inferMs": 170.852384,
+      "postMs": 0.379692,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 172.418153,
+      "preMs": 4.943076,
+      "inferMs": 167.012539,
+      "postMs": 0.462538,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 396.544,
+      "preMs": 5.73823,
+      "inferMs": 350.382462,
+      "postMs": 40.423308,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 360.4578460000001,
+      "preMs": 4.813615,
+      "inferMs": 316.153538,
+      "postMs": 39.490693,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 341.85076899999996,
+      "preMs": 4.265,
+      "inferMs": 299.128538,
+      "postMs": 38.457231,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 336.803924,
+      "preMs": 4.401539,
+      "inferMs": 297.036923,
+      "postMs": 35.365462,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 330.728539,
+      "preMs": 4.217231,
+      "inferMs": 294.027923,
+      "postMs": 32.483385,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 334.593154,
+      "preMs": 4.166693,
+      "inferMs": 291.275769,
+      "postMs": 39.150692,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 335.66961499999996,
+      "preMs": 4.189308,
+      "inferMs": 295.737461,
+      "postMs": 35.742846,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 337.17699999999996,
+      "preMs": 4.212923,
+      "inferMs": 299.860308,
+      "postMs": 33.103769,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 338.496077,
+      "preMs": 4.324923,
+      "inferMs": 298.722846,
+      "postMs": 35.448308,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 340.811154,
+      "preMs": 4.149308,
+      "inferMs": 302.086461,
+      "postMs": 34.575385,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 326.740231,
+      "preMs": 4.440231,
+      "inferMs": 299.001231,
+      "postMs": 23.298769,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 334.90284599999995,
+      "preMs": 4.297538,
+      "inferMs": 299.668,
+      "postMs": 30.937308,
+      "detections": 300
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 316.03838499999995,
+      "preMs": 4.391308,
+      "inferMs": 311.317615,
+      "postMs": 0.329462,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 316.36023100000006,
+      "preMs": 4.343,
+      "inferMs": 311.669231,
+      "postMs": 0.348,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 315.786539,
+      "preMs": 4.284,
+      "inferMs": 311.175385,
+      "postMs": 0.327154,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 314.892,
+      "preMs": 4.373539,
+      "inferMs": 310.159076,
+      "postMs": 0.359385,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 316.669462,
+      "preMs": 4.363308,
+      "inferMs": 311.928,
+      "postMs": 0.378154,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 339.956307,
+      "preMs": 4.496615,
+      "inferMs": 335.056539,
+      "postMs": 0.403153,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 355.15561499999995,
+      "preMs": 5.504615,
+      "inferMs": 349.225154,
+      "postMs": 0.425846,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 350.444846,
+      "preMs": 5.736,
+      "inferMs": 344.196539,
+      "postMs": 0.512307,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 353.577846,
+      "preMs": 5.390846,
+      "inferMs": 347.782077,
+      "postMs": 0.404923,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 357.16423000000003,
+      "preMs": 5.214461,
+      "inferMs": 351.493462,
+      "postMs": 0.456307,
+      "detections": 26
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 358.182846,
+      "preMs": 5.902231,
+      "inferMs": 351.892846,
+      "postMs": 0.387769,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 356.76930799999997,
+      "preMs": 5.243769,
+      "inferMs": 351.161462,
+      "postMs": 0.364077,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 116.728,
+      "preMs": 5.117538,
+      "inferMs": 111.164923,
+      "postMs": 0.445539,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 120.163308,
+      "preMs": 4.831385,
+      "inferMs": 114.907,
+      "postMs": 0.424923,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 118.94084600000001,
+      "preMs": 5.574385,
+      "inferMs": 113.004923,
+      "postMs": 0.361538,
+      "detections": 19
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 119.986461,
+      "preMs": 5.091769,
+      "inferMs": 114.466154,
+      "postMs": 0.428538,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.887923,
+      "preMs": 5.300539,
+      "inferMs": 112.115153,
+      "postMs": 0.472231,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 120.905231,
+      "preMs": 5.237231,
+      "inferMs": 114.987769,
+      "postMs": 0.680231,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 121.06823,
+      "preMs": 5.162769,
+      "inferMs": 115.410769,
+      "postMs": 0.494692,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 121.761308,
+      "preMs": 5.285231,
+      "inferMs": 114.421538,
+      "postMs": 2.054539,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 125.472923,
+      "preMs": 11.892231,
+      "inferMs": 113.163769,
+      "postMs": 0.416923,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 121.903,
+      "preMs": 5.482077,
+      "inferMs": 116.001846,
+      "postMs": 0.419077,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 127.255923,
+      "preMs": 5.292,
+      "inferMs": 121.466461,
+      "postMs": 0.497462,
+      "detections": 23
+    },
+    {
+      "round": 2,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 124.440538,
+      "preMs": 5.345461,
+      "inferMs": 118.580616,
+      "postMs": 0.514461,
+      "detections": 21
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 167.293846,
+      "preMs": 5.176615,
+      "inferMs": 161.717462,
+      "postMs": 0.399769,
+      "detections": 29
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 163.991384,
+      "preMs": 5.284923,
+      "inferMs": 158.315692,
+      "postMs": 0.390769,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 158.66530799999998,
+      "preMs": 5.126231,
+      "inferMs": 153.164,
+      "postMs": 0.375077,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 148.459384,
+      "preMs": 5.191077,
+      "inferMs": 142.901538,
+      "postMs": 0.366769,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 167.11876900000001,
+      "preMs": 4.684615,
+      "inferMs": 161.828,
+      "postMs": 0.606154,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 160.452615,
+      "preMs": 5.862461,
+      "inferMs": 154.225231,
+      "postMs": 0.364923,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 153.54515300000003,
+      "preMs": 5.029153,
+      "inferMs": 148.080385,
+      "postMs": 0.435615,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 165.911,
+      "preMs": 5.771616,
+      "inferMs": 159.490231,
+      "postMs": 0.649153,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 153.10453799999996,
+      "preMs": 4.746077,
+      "inferMs": 147.939384,
+      "postMs": 0.419077,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 151.943769,
+      "preMs": 4.694538,
+      "inferMs": 146.902692,
+      "postMs": 0.346539,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 158.476924,
+      "preMs": 5.055616,
+      "inferMs": 152.971461,
+      "postMs": 0.449847,
+      "detections": 28
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 163.862231,
+      "preMs": 5.037923,
+      "inferMs": 158.457846,
+      "postMs": 0.366462,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 198.030231,
+      "preMs": 4.731462,
+      "inferMs": 192.875923,
+      "postMs": 0.422846,
+      "detections": 29
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 221.461,
+      "preMs": 8.292693,
+      "inferMs": 212.778154,
+      "postMs": 0.390153,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 217.863308,
+      "preMs": 4.763385,
+      "inferMs": 212.309769,
+      "postMs": 0.790154,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 201.18276899999998,
+      "preMs": 5.394846,
+      "inferMs": 194.100846,
+      "postMs": 1.687077,
+      "detections": 25
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 204.60861500000001,
+      "preMs": 8.539384,
+      "inferMs": 195.621308,
+      "postMs": 0.447923,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 195.588616,
+      "preMs": 5.132,
+      "inferMs": 190.066693,
+      "postMs": 0.389923,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 228.50061599999998,
+      "preMs": 5.638231,
+      "inferMs": 222.391616,
+      "postMs": 0.470769,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 211.16253899999998,
+      "preMs": 5.949308,
+      "inferMs": 204.776615,
+      "postMs": 0.436616,
+      "detections": 24
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 191.632307,
+      "preMs": 4.978461,
+      "inferMs": 186.193539,
+      "postMs": 0.460307,
+      "detections": 27
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 216.12484600000002,
+      "preMs": 5.607693,
+      "inferMs": 210.143077,
+      "postMs": 0.374076,
+      "detections": 22
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 230.21361600000003,
+      "preMs": 5.072077,
+      "inferMs": 223.271385,
+      "postMs": 1.870154,
+      "detections": 28
+    },
+    {
+      "round": 2,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 217.815385,
+      "preMs": 9.180385,
+      "inferMs": 208.237461,
+      "postMs": 0.397539,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 426.427384,
+      "preMs": 4.991615,
+      "inferMs": 420.859693,
+      "postMs": 0.576076,
+      "detections": 29
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 435.123693,
+      "preMs": 5.860616,
+      "inferMs": 428.821846,
+      "postMs": 0.441231,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 464.361154,
+      "preMs": 5.494385,
+      "inferMs": 458.5,
+      "postMs": 0.366769,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 461.938154,
+      "preMs": 5.606385,
+      "inferMs": 454.552307,
+      "postMs": 1.779462,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 453.614769,
+      "preMs": 10.270154,
+      "inferMs": 442.897846,
+      "postMs": 0.446769,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 444.263692,
+      "preMs": 5.987615,
+      "inferMs": 437.889847,
+      "postMs": 0.38623,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 437.07784599999997,
+      "preMs": 6.043615,
+      "inferMs": 430.574231,
+      "postMs": 0.46,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 435.656923,
+      "preMs": 5.327692,
+      "inferMs": 429.903154,
+      "postMs": 0.426077,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 442.617615,
+      "preMs": 5.400077,
+      "inferMs": 436.788923,
+      "postMs": 0.428615,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 437.23176900000004,
+      "preMs": 5.598153,
+      "inferMs": 431.28677,
+      "postMs": 0.346846,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 436.91753800000004,
+      "preMs": 5.598154,
+      "inferMs": 430.836538,
+      "postMs": 0.482846,
+      "detections": 28
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "totalMs": 424.186231,
+      "preMs": 5.469308,
+      "inferMs": 418.263077,
+      "postMs": 0.453846,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 328.957307,
+      "preMs": 5.333846,
+      "inferMs": 323.197923,
+      "postMs": 0.425538,
+      "detections": 29
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 331.014693,
+      "preMs": 6.042462,
+      "inferMs": 324.375384,
+      "postMs": 0.596847,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 331.232384,
+      "preMs": 5.022846,
+      "inferMs": 325.772,
+      "postMs": 0.437538,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 339.717847,
+      "preMs": 5.693847,
+      "inferMs": 333.602692,
+      "postMs": 0.421308,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 334.023308,
+      "preMs": 5.758692,
+      "inferMs": 327.852308,
+      "postMs": 0.412308,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 335.63469200000003,
+      "preMs": 5.794077,
+      "inferMs": 329.455692,
+      "postMs": 0.384923,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 336.424692,
+      "preMs": 5.421846,
+      "inferMs": 330.581308,
+      "postMs": 0.421538,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 344.75776900000005,
+      "preMs": 5.520231,
+      "inferMs": 338.822154,
+      "postMs": 0.415384,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 345.358769,
+      "preMs": 5.737461,
+      "inferMs": 339.198154,
+      "postMs": 0.423154,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 340.54792299999997,
+      "preMs": 5.331692,
+      "inferMs": 334.807384,
+      "postMs": 0.408847,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 330.157462,
+      "preMs": 5.784539,
+      "inferMs": 323.984615,
+      "postMs": 0.388308,
+      "detections": 28
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "totalMs": 342.935615,
+      "preMs": 5.053769,
+      "inferMs": 337.478154,
+      "postMs": 0.403692,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 138.404,
+      "preMs": 5.52677,
+      "inferMs": 132.419076,
+      "postMs": 0.458154,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 125.38038500000002,
+      "preMs": 5.171692,
+      "inferMs": 119.793923,
+      "postMs": 0.41477,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 123.644923,
+      "preMs": 5.476616,
+      "inferMs": 117.840384,
+      "postMs": 0.327923,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 124.65538399999998,
+      "preMs": 6.075077,
+      "inferMs": 118.205615,
+      "postMs": 0.374692,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 126.177154,
+      "preMs": 4.932,
+      "inferMs": 120.836308,
+      "postMs": 0.408846,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 129.90092299999998,
+      "preMs": 4.978462,
+      "inferMs": 124.518153,
+      "postMs": 0.404308,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 132.386461,
+      "preMs": 5.033846,
+      "inferMs": 126.937846,
+      "postMs": 0.414769,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 128.776923,
+      "preMs": 5.304308,
+      "inferMs": 123.008615,
+      "postMs": 0.464,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 126.223615,
+      "preMs": 6.274461,
+      "inferMs": 119.544924,
+      "postMs": 0.40423,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 122.12823,
+      "preMs": 5.188923,
+      "inferMs": 116.545461,
+      "postMs": 0.393846,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 130.069615,
+      "preMs": 4.942231,
+      "inferMs": 124.751923,
+      "postMs": 0.375461,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT CPU",
+      "totalMs": 130.184616,
+      "preMs": 4.937231,
+      "inferMs": 124.877538,
+      "postMs": 0.369847,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 178.48192299999997,
+      "preMs": 5.267769,
+      "inferMs": 172.868846,
+      "postMs": 0.345308,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 181.284923,
+      "preMs": 4.69623,
+      "inferMs": 176.224385,
+      "postMs": 0.364308,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 161.40892300000002,
+      "preMs": 4.701,
+      "inferMs": 156.300923,
+      "postMs": 0.407,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 166.629,
+      "preMs": 8.278462,
+      "inferMs": 157.971461,
+      "postMs": 0.379077,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 160.47938500000004,
+      "preMs": 5.275616,
+      "inferMs": 154.655153,
+      "postMs": 0.548616,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 168.038462,
+      "preMs": 5.163308,
+      "inferMs": 162.376923,
+      "postMs": 0.498231,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 169.359154,
+      "preMs": 5.241615,
+      "inferMs": 163.691693,
+      "postMs": 0.425846,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 167.988846,
+      "preMs": 5.300539,
+      "inferMs": 162.247692,
+      "postMs": 0.440615,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 171.85899999999998,
+      "preMs": 4.618385,
+      "inferMs": 166.821923,
+      "postMs": 0.418692,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 189.955077,
+      "preMs": 5.496231,
+      "inferMs": 182.722846,
+      "postMs": 1.736,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 173.479154,
+      "preMs": 7.963385,
+      "inferMs": 165.135692,
+      "postMs": 0.380077,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "totalMs": 162.895384,
+      "preMs": 5.904231,
+      "inferMs": 155.36623,
+      "postMs": 1.624923,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 403.903923,
+      "preMs": 5.948923,
+      "inferMs": 356.927,
+      "postMs": 41.028,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 353.721923,
+      "preMs": 4.450154,
+      "inferMs": 307.427077,
+      "postMs": 41.844692,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 356.74277,
+      "preMs": 4.445154,
+      "inferMs": 311.352385,
+      "postMs": 40.945231,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 348.911077,
+      "preMs": 4.471077,
+      "inferMs": 309.410462,
+      "postMs": 35.029538,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 351.93076999999994,
+      "preMs": 4.432616,
+      "inferMs": 313.099615,
+      "postMs": 34.398539,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 365.14584599999995,
+      "preMs": 4.362692,
+      "inferMs": 318.379693,
+      "postMs": 42.403461,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 372.08546099999995,
+      "preMs": 4.673769,
+      "inferMs": 325.972385,
+      "postMs": 41.439307,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 368.522077,
+      "preMs": 4.699924,
+      "inferMs": 326.061615,
+      "postMs": 37.760538,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 371.833231,
+      "preMs": 4.679693,
+      "inferMs": 327.177538,
+      "postMs": 39.976,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 368.479693,
+      "preMs": 4.682462,
+      "inferMs": 325.063077,
+      "postMs": 38.734154,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 356.42884599999996,
+      "preMs": 4.958154,
+      "inferMs": 325.724307,
+      "postMs": 25.746385,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "totalMs": 356.97200000000004,
+      "preMs": 4.675769,
+      "inferMs": 320.350769,
+      "postMs": 31.945462,
+      "detections": 300
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 333.218231,
+      "preMs": 4.653923,
+      "inferMs": 328.180923,
+      "postMs": 0.383385,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 335.000846,
+      "preMs": 5.094154,
+      "inferMs": 329.509231,
+      "postMs": 0.397461,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 336.05907700000006,
+      "preMs": 4.738846,
+      "inferMs": 330.970769,
+      "postMs": 0.349462,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 334.728,
+      "preMs": 4.601846,
+      "inferMs": 329.762769,
+      "postMs": 0.363385,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 331.389846,
+      "preMs": 4.565615,
+      "inferMs": 326.449154,
+      "postMs": 0.375077,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 359.154385,
+      "preMs": 4.504,
+      "inferMs": 354.214077,
+      "postMs": 0.436308,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 354.593847,
+      "preMs": 5.351616,
+      "inferMs": 348.833923,
+      "postMs": 0.408308,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 355.952692,
+      "preMs": 5.841923,
+      "inferMs": 349.706769,
+      "postMs": 0.404,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 361.729539,
+      "preMs": 5.779385,
+      "inferMs": 355.548615,
+      "postMs": 0.401539,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 354.058384,
+      "preMs": 4.977461,
+      "inferMs": 348.657847,
+      "postMs": 0.423076,
+      "detections": 26
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 358.166385,
+      "preMs": 5.505769,
+      "inferMs": 352.21577,
+      "postMs": 0.444846,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite CPU",
+      "totalMs": 352.796615,
+      "preMs": 6.351615,
+      "inferMs": 346.061308,
+      "postMs": 0.383692,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 118.58761500000001,
+      "preMs": 5.183384,
+      "inferMs": 112.804539,
+      "postMs": 0.599692,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.96653800000001,
+      "preMs": 4.930231,
+      "inferMs": 112.447692,
+      "postMs": 0.588615,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 117.987769,
+      "preMs": 4.875692,
+      "inferMs": 112.539692,
+      "postMs": 0.572385,
+      "detections": 19
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 115.89938400000001,
+      "preMs": 4.828923,
+      "inferMs": 110.584,
+      "postMs": 0.486461,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 115.99138400000001,
+      "preMs": 4.811384,
+      "inferMs": 110.782154,
+      "postMs": 0.397846,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 122.09815400000001,
+      "preMs": 4.646461,
+      "inferMs": 116.870693,
+      "postMs": 0.581,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 124.739923,
+      "preMs": 5.72,
+      "inferMs": 118.289231,
+      "postMs": 0.730692,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 125.944231,
+      "preMs": 4.926692,
+      "inferMs": 120.181846,
+      "postMs": 0.835693,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 131.33223,
+      "preMs": 6.621538,
+      "inferMs": 124.170385,
+      "postMs": 0.540307,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 128.37599999999998,
+      "preMs": 4.984,
+      "inferMs": 121.74,
+      "postMs": 1.652,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 149.623692,
+      "preMs": 13.492615,
+      "inferMs": 135.619385,
+      "postMs": 0.511692,
+      "detections": 23
+    },
+    {
+      "round": 3,
+      "model": "YOLO11n baseline · TFLite GPU",
+      "totalMs": 139.236308,
+      "preMs": 5.235,
+      "inferMs": 133.578539,
+      "postMs": 0.422769,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 168.633615,
+      "preMs": 4.943154,
+      "inferMs": 163.249538,
+      "postMs": 0.440923,
+      "detections": 29
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 156.41500000000002,
+      "preMs": 5.731692,
+      "inferMs": 150.26577,
+      "postMs": 0.417538,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 154.779154,
+      "preMs": 6.012616,
+      "inferMs": 148.412615,
+      "postMs": 0.353923,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 147.330769,
+      "preMs": 5.036,
+      "inferMs": 141.872307,
+      "postMs": 0.422462,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 162.62153899999998,
+      "preMs": 5.815462,
+      "inferMs": 156.386769,
+      "postMs": 0.419308,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 145.45846099999997,
+      "preMs": 4.78623,
+      "inferMs": 140.296923,
+      "postMs": 0.375308,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 158.850231,
+      "preMs": 4.858539,
+      "inferMs": 153.554385,
+      "postMs": 0.437307,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 153.920692,
+      "preMs": 4.809923,
+      "inferMs": 148.693461,
+      "postMs": 0.417308,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 153.069847,
+      "preMs": 4.831308,
+      "inferMs": 147.849616,
+      "postMs": 0.388923,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 159.66522999999998,
+      "preMs": 4.779,
+      "inferMs": 154.578153,
+      "postMs": 0.308077,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 156.234769,
+      "preMs": 5.570231,
+      "inferMs": 148.932615,
+      "postMs": 1.731923,
+      "detections": 28
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "totalMs": 191.84123,
+      "preMs": 17.524307,
+      "inferMs": 173.904385,
+      "postMs": 0.412538,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 190.75099999999998,
+      "preMs": 5.705539,
+      "inferMs": 184.656615,
+      "postMs": 0.388846,
+      "detections": 29
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 219.25199999999998,
+      "preMs": 5.065307,
+      "inferMs": 213.792308,
+      "postMs": 0.394385,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 190.992538,
+      "preMs": 5.139692,
+      "inferMs": 185.48677,
+      "postMs": 0.366076,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 192.67477,
+      "preMs": 5.252693,
+      "inferMs": 187.026461,
+      "postMs": 0.395616,
+      "detections": 25
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 202.266154,
+      "preMs": 4.997539,
+      "inferMs": 196.130154,
+      "postMs": 1.138461,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 201.34977,
+      "preMs": 5.589462,
+      "inferMs": 195.400923,
+      "postMs": 0.359385,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 205.416615,
+      "preMs": 4.543077,
+      "inferMs": 200.469615,
+      "postMs": 0.403923,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 213.173924,
+      "preMs": 5.226847,
+      "inferMs": 207.525538,
+      "postMs": 0.421539,
+      "detections": 24
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 212.93446100000003,
+      "preMs": 6.161538,
+      "inferMs": 206.317462,
+      "postMs": 0.455461,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 207.387769,
+      "preMs": 5.129539,
+      "inferMs": 200.673,
+      "postMs": 1.58523,
+      "detections": 22
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 234.67784699999999,
+      "preMs": 5.507,
+      "inferMs": 228.088,
+      "postMs": 1.082847,
+      "detections": 28
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "totalMs": 206.423692,
+      "preMs": 5.183,
+      "inferMs": 200.786538,
+      "postMs": 0.454154,
+      "detections": 27
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 404.87046200000003,
+      "preMs": 5.138462,
+      "inferMs": 399.552384,
+      "postMs": 0.179616,
+      "detections": 21
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 400.135077,
+      "preMs": 4.392923,
+      "inferMs": 395.587692,
+      "postMs": 0.154462,
+      "detections": 20
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 354.256692,
+      "preMs": 4.802769,
+      "inferMs": 349.340692,
+      "postMs": 0.113231,
+      "detections": 1
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 357.77961600000003,
+      "preMs": 4.344846,
+      "inferMs": 353.300385,
+      "postMs": 0.134385,
+      "detections": 14
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 355.549846,
+      "preMs": 4.410077,
+      "inferMs": 351.008923,
+      "postMs": 0.130846,
+      "detections": 8
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 369.685231,
+      "preMs": 4.635462,
+      "inferMs": 364.916,
+      "postMs": 0.133769,
+      "detections": 13
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 375.64707699999997,
+      "preMs": 4.752846,
+      "inferMs": 370.750231,
+      "postMs": 0.144,
+      "detections": 8
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 373.97999999999996,
+      "preMs": 4.630231,
+      "inferMs": 369.187077,
+      "postMs": 0.162692,
+      "detections": 12
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 371.933154,
+      "preMs": 4.708615,
+      "inferMs": 367.044,
+      "postMs": 0.180539,
+      "detections": 13
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 372.860231,
+      "preMs": 5.129462,
+      "inferMs": 367.596307,
+      "postMs": 0.134462,
+      "detections": 5
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 377.327615,
+      "preMs": 4.972231,
+      "inferMs": 372.228307,
+      "postMs": 0.127077,
+      "detections": 4
+    },
+    {
+      "round": 3,
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "totalMs": 374.614538,
+      "preMs": 5.418538,
+      "inferMs": 369.078693,
+      "postMs": 0.117307,
+      "detections": 1
+    }
+  ],
+  "summary": [
+    {
+      "model": "FSDH-YOLO-n (seed0) · ORT CPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 138.56241016666667,
+      "allRoundsMeanMs": 152.73119216666666,
+      "allRoundsSdMs": 12.739328448117227,
+      "dropFirstMeanMs": 157.45411950000002,
+      "dropFirstSdMs": 8.290341674730778,
+      "fpsDropFirst": 6.3510564421910845,
+      "meanDetections": 25.916666666666668,
+      "coldStartPenaltyPct": -11.998231226546823
+    },
+    {
+      "model": "FSDH-YOLO-n (seed0) · ORT XNNPACK",
+      "rounds": 4,
+      "firstRoundMeanMs": 211.0353846666667,
+      "allRoundsMeanMs": 206.7426940416668,
+      "allRoundsSdMs": 14.173959412618528,
+      "dropFirstMeanMs": 205.31179716666668,
+      "dropFirstSdMs": 14.84065409761737,
+      "fpsDropFirst": 4.8706407220634595,
+      "meanDetections": 25.916666666666668,
+      "coldStartPenaltyPct": 2.7877538353793434
+    },
+    {
+      "model": "FSDH-YOLO-n (seed0) · ORT NNAPI",
+      "rounds": 4,
+      "firstRoundMeanMs": 321.35162199999996,
+      "allRoundsMeanMs": 340.59685904166673,
+      "allRoundsSdMs": 27.615661483042295,
+      "dropFirstMeanMs": 347.01193805555556,
+      "dropFirstSdMs": 26.402668005003857,
+      "fpsDropFirst": 2.881745237940209,
+      "meanDetections": 10,
+      "coldStartPenaltyPct": -7.394649359713802
+    },
+    {
+      "model": "FSDH-YOLO-n (seed0) · TFLite CPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 665.9733654166666,
+      "allRoundsMeanMs": 465.665125,
+      "allRoundsSdMs": 194.4225531262359,
+      "dropFirstMeanMs": 398.89571152777785,
+      "dropFirstSdMs": 47.82069940499215,
+      "fpsDropFirst": 2.5069209096532568,
+      "meanDetections": 25.916666666666668,
+      "coldStartPenaltyPct": 66.95425550351908
+    },
+    {
+      "model": "FSDH-YOLO-n (seed0) · TFLite GPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 606.4593011666667,
+      "allRoundsMeanMs": 390.2308172916666,
+      "allRoundsSdMs": 143.80661325289992,
+      "dropFirstMeanMs": 318.154656,
+      "dropFirstSdMs": 26.244045798585887,
+      "fpsDropFirst": 3.1431254615994053,
+      "meanDetections": 25.916666666666668,
+      "coldStartPenaltyPct": 90.61776709207321
+    },
+    {
+      "model": "YOLO11n baseline · ORT CPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 138.76650016666667,
+      "allRoundsMeanMs": 131.29414268750006,
+      "allRoundsSdMs": 17.598003744494886,
+      "dropFirstMeanMs": 128.80335686111115,
+      "dropFirstSdMs": 6.8973907050181955,
+      "fpsDropFirst": 7.7637728112808535,
+      "meanDetections": 23.666666666666668,
+      "coldStartPenaltyPct": 7.73515811105668
+    },
+    {
+      "model": "YOLO11n baseline · ORT XNNPACK",
+      "rounds": 4,
+      "firstRoundMeanMs": 161.93625633333332,
+      "allRoundsMeanMs": 168.70498395833332,
+      "allRoundsSdMs": 8.71601239731481,
+      "dropFirstMeanMs": 170.9612265,
+      "dropFirstSdMs": 8.087062712121645,
+      "fpsDropFirst": 5.849279514849526,
+      "meanDetections": 23.666666666666668,
+      "coldStartPenaltyPct": -5.278957311801158
+    },
+    {
+      "model": "YOLO11n baseline · ORT NNAPI",
+      "rounds": 4,
+      "firstRoundMeanMs": 308.9885834166667,
+      "allRoundsMeanMs": 336.63840714583336,
+      "allRoundsSdMs": 25.54315911211565,
+      "dropFirstMeanMs": 345.8550150555555,
+      "dropFirstSdMs": 20.954694425730793,
+      "fpsDropFirst": 2.8913849921747343,
+      "meanDetections": 300,
+      "coldStartPenaltyPct": -10.659504715571886
+    },
+    {
+      "model": "YOLO11n baseline · TFLite CPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 285.4477818333333,
+      "allRoundsMeanMs": 326.8929118541667,
+      "allRoundsSdMs": 29.303959424693204,
+      "dropFirstMeanMs": 340.7079551944445,
+      "dropFirstSdMs": 18.757577257570134,
+      "fpsDropFirst": 2.935065016105341,
+      "meanDetections": 23.666666666666668,
+      "coldStartPenaltyPct": -16.219220161611375
+    },
+    {
+      "model": "YOLO11n baseline · TFLite GPU",
+      "rounds": 4,
+      "firstRoundMeanMs": 131.3031540833333,
+      "allRoundsMeanMs": 125.65966345833336,
+      "allRoundsSdMs": 13.141136856935832,
+      "dropFirstMeanMs": 123.77849991666663,
+      "dropFirstSdMs": 6.948513485196119,
+      "fpsDropFirst": 8.078947480162112,
+      "meanDetections": 22.25,
+      "coldStartPenaltyPct": 6.079128581888309
+    }
+  ]
+}
