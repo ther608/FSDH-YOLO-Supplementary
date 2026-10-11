@@ -1,0 +1,7 @@
+Model,TrueClass,unripe_mean,unripe_sd,semi-ripe_mean,semi-ripe_sd,ripe_mean,ripe_sd,MissFN_mean,MissFN_sd
+YOLO11n,unripe,86.207,2.497,1.149,0.929,0.313,0.276,12.330,2.306
+YOLO11n,semi-ripe,5.003,2.527,75.957,5.240,10.924,2.304,8.116,1.991
+YOLO11n,ripe,0.486,0.179,14.535,1.035,78.083,1.006,6.896,0.902
+FSDH-YOLO,unripe,87.078,2.351,1.428,0.784,0.348,0.121,11.146,1.464
+FSDH-YOLO,semi-ripe,5.564,0.468,70.495,1.687,14.650,1.238,9.290,1.076
+FSDH-YOLO,ripe,0.401,0.198,9.642,1.665,83.462,1.165,6.495,0.524
