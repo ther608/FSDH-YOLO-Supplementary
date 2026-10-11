@@ -1,17 +1,19 @@
 # Citation metadata for the FSDH-YOLO supplementary materials repository.
 #
-# NOTE FOR THE AUTHORS: the fields marked "PLACEHOLDER" below must be filled in
-# before this file is used. Author names are intentionally not guessed here.
-# Once the manuscript is accepted, also add the DOI and the final article title.
+# ANONYMITY: the authors are listed as "Anonymous Authors" because the associated
+# manuscript is under review. Before the manuscript is published, replace the
+# `authors` block below with the real author list in manuscript order, restore the
+# article title in `preferred-citation`, and add the DOI.
 
 cff-version: 1.2.0
-message: "If you use these supplementary materials, please cite the manuscript below."
-title: "FSDH-YOLO: Spatial-to-Depth Rearrangement and Hierarchical Feature Enhancement for Litchi Maturity Detection in Natural Orchards"
+message: "If you use these supplementary materials, please cite the associated paper."
+title: "FSDH-YOLO Supplementary Materials"
 abstract: >-
   Supplementary materials for a lightweight litchi maturity detection model
   (FSDH-YOLO) built on a YOLO11n baseline. The repository provides per-seed
   results for every experiment reported in the paper, the evaluation protocol,
-  and the complete Android on-device deployment package.
+  and the complete Android on-device deployment package. Datasets and trained
+  checkpoints are not redistributed.
 type: software
 license: MIT
 repository-code: "https://github.com/ther608/FSDH-YOLO-Supplementary"
@@ -26,17 +28,18 @@ keywords:
   - ONNX Runtime
   - Android deployment
 authors:
-  # PLACEHOLDER — replace with the real author list, in manuscript order.
-  - family-names: "PLACEHOLDER"
-    given-names: "PLACEHOLDER"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
-# PLACEHOLDER — set this once the manuscript is published.
-# doi: "10.xxxx/xxxxx"
-# preferred-citation:
-#   type: article
-#   title: "..."
-#   authors: [...]
-#   journal: "..."
-#   year: 2026
+  - family-names: "Anonymous"
+    given-names: "Authors"
 version: "1.0.0"
 date-released: "2026-10-11"
+
+# Uncomment and fill in once the manuscript is accepted.
+# preferred-citation:
+#   type: article
+#   title: "FSDH-YOLO: Spatial-to-Depth Rearrangement and Hierarchical Feature Enhancement for Litchi Maturity Detection in Natural Orchards"
+#   authors:
+#     - family-names: "..."
+#       given-names: "..."
+#   journal: "..."
+#   year: 2026
+#   doi: "10.xxxx/xxxxx"

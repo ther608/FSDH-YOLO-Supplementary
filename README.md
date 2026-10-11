@@ -43,7 +43,7 @@ The complete training implementation is based on the publicly available
 ├── android_deployment/          §3.9 + Appendix A.7 + Appendix B.5
 │   ├── paper_texts/               the three paper sections, verbatim
 │   ├── android_app/               Android Studio project (Kotlin)
-│   ├── measurement_records/       protocol, raw sessions, bench runs, verification
+│   ├── deployment_evaluation_results/  summary tables + raw device records
 │   ├── scripts/                   export & verification scripts
 │   └── PROVENANCE.md              artifact hashes and source-run mapping
 │
@@ -130,17 +130,20 @@ artefacts and cross-checked against the manuscript:
 | 3 | Appendix C / record ↔ raw source artefacts | 825 | 0 |
 | 4 | Deployment tables ↔ raw device records | all | 0 |
 
-See `reproduction_notes/README.md` for the full provenance map.
+See [`reproduction_notes/`](reproduction_notes) for the full provenance map.
 
-Two documentation defects were found in the manuscript during this pass and are
-reported in `reproduction_notes/README.md` § *Known manuscript issues*.
+Four documentation defects were found in the manuscript during this pass — none affects a
+computed result. Three are reported in `reproduction_notes/README.md` § *Known manuscript
+issues*; the fourth is a diagnostic cell in Appendix B.5, noted in
+[`android_deployment/deployment_evaluation_results/README.md`](android_deployment/deployment_evaluation_results/README.md).
 
 ---
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). Author names and the final article title are
-**placeholders** until the manuscript is accepted; please update before citing.
+See [`CITATION.cff`](CITATION.cff). The authors are listed as **Anonymous Authors**
+because the manuscript is under review; the real author list, the article title and the
+DOI will replace them once the paper is published.
 
 ---
 
