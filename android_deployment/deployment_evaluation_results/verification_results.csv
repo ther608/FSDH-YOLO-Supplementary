@@ -1,0 +1,18 @@
+level,item,metric,value,unit,source_file
+L1 export equivalence,pt_rect0,mAP50,0.855298,,verification/rect_probe.json
+L1 export equivalence,pt_rect0,mAP50-95,0.709519,,verification/rect_probe.json
+L1 export equivalence,pt_rect0,"per-class mAP50-95 [unripe, semi-ripe, ripe]",0.727745; 0.642125; 0.758687,,verification/rect_probe.json
+L1 export equivalence,onnx_rect1,mAP50,0.855298,,verification/rect_probe.json
+L1 export equivalence,onnx_rect1,mAP50-95,0.709519,,verification/rect_probe.json
+L1 export equivalence,onnx_rect1,"per-class mAP50-95 [unripe, semi-ripe, ripe]",0.727745; 0.642125; 0.758687,,verification/rect_probe.json
+L1 export equivalence,onnx_rect0,mAP50,0.855298,,verification/rect_probe.json
+L1 export equivalence,onnx_rect0,mAP50-95,0.709519,,verification/rect_probe.json
+L1 export equivalence,onnx_rect0,"per-class mAP50-95 [unripe, semi-ripe, ripe]",0.727745; 0.642125; 0.758687,,verification/rect_probe.json
+L1 export equivalence,pt_rect1 (default rect=True - not comparable),mAP50,0.855195,,verification/rect_probe.json
+L1 export equivalence,pt_rect1 (default rect=True - not comparable),mAP50-95,0.710237,,verification/rect_probe.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,images compared,12,,verification/decode_validation.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,detections (ours / reference),207 / 207,,verification/decode_validation.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,images with matching count,12,,verification/decode_validation.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,images with class mismatch,0,,verification/decode_validation.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,max box coordinate gap,1.0,px,verification/decode_validation.json
+L2 on-device pipeline equivalence,Kotlin decode pipeline vs Ultralytics reference,mean box coordinate gap,0.277,px,verification/decode_validation.json

@@ -33,11 +33,14 @@ android_deployment/
 │   ├── app/src/slim/                 deployment build: ORT + final ONNX model only
 │   └── app/src/main/assets/          the deployed ONNX model
 │
-├── measurement_records/
-│   ├── protocol/                     protocol definition and the published result summary
-│   ├── sessions/                     raw per-session records (run1/2/3, diagnostics)
-│   ├── bench/                        raw fixed-input benchmark runs (4 rounds each)
-│   └── verification/                 export record, L1/L2 verification, archive notes
+├── deployment_evaluation_results/    the measured results, as summary tables
+│   ├── fixed_input_latency.csv         Appendix B.5-1
+│   ├── continuous_camera_sessions.csv  Appendix B.5-3 / B.5-5 / B.5-6
+│   ├── thermal_state.csv               Appendix B.5-4
+│   ├── verification_results.csv        Appendix B.5-2
+│   ├── deployment_footprint.md         Appendix B.5-7
+│   ├── results_summary.json            authoritative summary written by the harness
+│   └── raw_records/                    unprocessed sessions, bench runs, harness, verification
 │
 ├── scripts/                        export, conversion, and verification scripts
 └── PROVENANCE.md                   artefact hashes and source-run mapping
@@ -124,17 +127,22 @@ environment description, and [`PROVENANCE.md`](PROVENANCE.md) for artefact hashe
 
 ---
 
-## Reading the measurement records
+## Reading the results
 
-`measurement_records/MEASUREMENTS_README.md` is the original note accompanying the raw
-records and lists the caveats that must be observed before interpreting them. The most
-important ones:
+[`deployment_evaluation_results/`](deployment_evaluation_results) holds the measured
+results as summary tables, one per paper item, each derived from the raw device records
+rather than transcribed. Read its README first: the `section` column of
+`continuous_camera_sessions.csv` separates the **three predefined runs that are the
+reported result** from the post-hoc diagnostics and the back-to-back control, which are
+**not** performance results.
+
+The most important caveats:
 
 - Session-level results are **never pooled across sessions**; each 60 s run is reported
   on its own.
-- The three predefined runs in `protocol/results_summary.json → primary` **are** the
-  reported deployment result. Everything under `diagnostics` is post-hoc investigation
-  and is not a performance result.
 - The app-level `PowerManager.getCurrentThermalStatus()` kept returning `NONE` while the
   HAL SKIN sensor reported a high thermal state; it is a record field only and **is not
   evidence that thermal conditions were controlled**.
+- The unprocessed material lives under
+  [`deployment_evaluation_results/raw_records/`](deployment_evaluation_results/raw_records);
+  its README lists the caveats that apply before interpreting it.

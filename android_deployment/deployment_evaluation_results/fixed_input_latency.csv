@@ -1,0 +1,3 @@
+model,backend,pipeline_latency_ms,pipeline_latency_sd_ms,fps,preprocess_ms,inference_ms,decode_nms_ms,mean_detections,rounds,frames_excluded,frames_per_round
+FSDH-YOLO-n (seed0),ORT CPU,157.5,8.3,6.35,5.5,151.5,0.4,25.9,4,round 0 (cold start),9
+YOLO11n baseline,ORT CPU,128.8,6.9,7.76,5.1,123.3,0.4,23.7,4,round 0 (cold start),9

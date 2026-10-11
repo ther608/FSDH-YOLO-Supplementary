@@ -1,7 +1,7 @@
 # Scripts
 
 These are the scripts that produced the export, the verification records and the
-converted models in [`../measurement_records/`](../measurement_records). They are kept
+converted models in [`../deployment_evaluation_results/`](../deployment_evaluation_results). They are kept
 **verbatim** — the same files that were run — so the recorded output can be traced back
 to the exact code that generated it.
 
@@ -30,7 +30,7 @@ Scripts that only use paths relative to this folder are `convert_to_coreml.py`,
 `verify_tflite.py` and the two PowerShell scripts.
 
 The PowerShell harness scripts under
-[`../measurement_records/protocol/harness/`](../measurement_records/protocol/harness)
+[`../deployment_evaluation_results/raw_records/harness/`](../deployment_evaluation_results/raw_records/harness)
 also reference `adb` and the package name of the installed build; see the
 live-session protocol document alongside them.
 
@@ -50,8 +50,8 @@ live-session protocol document alongside them.
 | `setup_android_toolchain.ps1` | Set up the Android SDK / JDK toolchain on a fresh machine |
 
 Archived scripts are kept for provenance only; see
-[`../measurement_records/verification/ARCHIVE_ios_removed_from_paper.md`](../measurement_records/verification/ARCHIVE_ios_removed_from_paper.md)
-and [`ARCHIVE_appendix_backend_comparison.md`](../measurement_records/verification/ARCHIVE_appendix_backend_comparison.md)
+[`../deployment_evaluation_results/raw_records/verification/ARCHIVE_ios_removed_from_paper.md`](../deployment_evaluation_results/raw_records/verification/ARCHIVE_ios_removed_from_paper.md)
+and [`ARCHIVE_appendix_backend_comparison.md`](../deployment_evaluation_results/raw_records/verification/ARCHIVE_appendix_backend_comparison.md)
 for why those chains were removed from the paper.
 
 ## Expected environment

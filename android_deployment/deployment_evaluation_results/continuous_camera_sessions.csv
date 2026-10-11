@@ -1,0 +1,10 @@
+section,run,build,pre_timing_skin_c,valid_frames,processed_frames,e2e_mean_ms,e2e_sd_ms,e2e_p95_ms,infer_mean_ms,infer_sd_ms,fps
+predefined protocol (primary result),run1,control (full),53.87,210,230,242.34,17.86,284.63,205.43,16.79,4.13
+predefined protocol (primary result),run2,control (full),53.75,199,219,255.11,20.66,305.54,216.11,19.55,3.92
+predefined protocol (primary result),run3,control (full),53.72,197,217,257.09,18.09,292.96,217.33,17.05,3.89
+post-hoc diagnostic (not a result),slim-1,slim,53.6,184,,272.99,36.49,344.44,,,3.66
+post-hoc diagnostic (not a result),slim-2,slim,55.94,157,,313.59,27.45,354.31,,,3.19
+post-hoc diagnostic (not a result),full-recheck,full,54.07,169,,294.41,41.68,351.08,,,3.4
+back-to-back control (no reset between runs),run1,control (full),,188,208,268.22,21.22,312.64,,,3.73
+back-to-back control (no reset between runs),run2,control (full),,150,170,322.35,39.43,383.19,,,3.1
+back-to-back control (no reset between runs),run3,control (full),,114,134,381.3,91.54,634.13,,,2.62

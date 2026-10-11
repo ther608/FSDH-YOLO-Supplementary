@@ -1,0 +1,4 @@
+run,skin_before_c,skin_after_c,cpu_before_c,cpu_after_c,battery_before_c,battery_after_c,level_before_pct,level_after_pct,app_thermal_status
+run1,53.865,55.607,75.895,71.394,39,40,81,81,NONE
+run2,53.749,55.546,74.877,71.703,40,40,80,80,NONE
+run3,53.72,55.668,72.674,70.886,40,40,80,80,NONE

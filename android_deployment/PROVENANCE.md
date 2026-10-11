@@ -29,7 +29,7 @@ main results tables.
 | `android_app/app/src/full/assets/yolo11n_baseline_640_fp32.onnx` | 10,605,814 | `91e96370402c9d2045ebf20125efd4728a92c6d6081251dc71610c57476dacf9` |
 
 Export settings for both (see `scripts/export_onnx.py` and
-`measurement_records/verification/export_record.json`):
+`deployment_evaluation_results/raw_records/verification/export_record.json`):
 
 ```python
 format="onnx", imgsz=640, batch=1, dynamic=False, half=False,
@@ -78,15 +78,15 @@ the re-simplified variant, re-run `scripts/export_onnx.py`.
 
 | Paper item | Source file |
 |---|---|
-| Table 13 (deployment validation results) | `measurement_records/bench/bench_fsdh_1791274886517.json` → `summary[].dropFirstMeanMs / dropFirstSdMs / fpsDropFirst`; the continuous-camera range from `measurement_records/protocol/results_summary.json` → `primary.ranges` |
+| Table 13 (deployment validation results) | `deployment_evaluation_results/fixed_input_latency.csv` (derived from `deployment_evaluation_results/raw_records/bench/bench_fsdh_1791274886517.json`); the continuous-camera range from `deployment_evaluation_results/results_summary.json` → `primary.ranges` |
 | Appendix B.5-1 (fixed-input ORT CPU) | same bench file, `summary[]` entries `FSDH-YOLO-n … ORT CPU` and `YOLO11n baseline … ORT CPU` |
-| Appendix B.5-2 (L1 export equivalence) | `measurement_records/verification/rect_probe.json` |
-| Appendix B.5-2 (L2 on-device decode) | `measurement_records/verification/decode_validation.json` |
-| Appendix B.5-3 (three 60 s runs) | `measurement_records/protocol/results_summary.json` → `primary.runs`; per-frame detail in `measurement_records/sessions/run{1,2,3}/record.json` |
-| Appendix B.5-4 (thermal state) | `measurement_records/sessions/run{1,2,3}/record.json`, `sessions/runlog_cooled.txt` |
+| Appendix B.5-2 (L1 export equivalence) | `deployment_evaluation_results/verification_results.csv`, raw in `deployment_evaluation_results/raw_records/verification/rect_probe.json` |
+| Appendix B.5-2 (L2 on-device decode) | `deployment_evaluation_results/verification_results.csv`, raw in `deployment_evaluation_results/raw_records/verification/decode_validation.json` |
+| Appendix B.5-3 (three 60 s runs) | `deployment_evaluation_results/continuous_camera_sessions.csv`; per-frame detail in `deployment_evaluation_results/raw_records/sessions/run{1,2,3}/record.json` |
+| Appendix B.5-4 (thermal state) | `deployment_evaluation_results/thermal_state.csv`, raw in `deployment_evaluation_results/raw_records/sessions/runlog_cooled.txt` |
 | Appendix B.5-5 (post-hoc diagnostics) | `results_summary.json` → `diagnostics.runs`; `sessions/slim_sanity*/record.json`, `sessions/full_recheck/record.json` |
 | Appendix B.5-6 (back-to-back control) | `sessions/_superseded_backtoback/run{1,2,3}/record.json` |
-| Appendix B.5-7 (deployment footprint) | `measurement_records/protocol/deployment_footprint.md` |
+| Appendix B.5-7 (deployment footprint) | `deployment_evaluation_results/deployment_footprint.md` |
 | Figure 11 (app interface) | reproduced from the app itself; screenshots are not redistributed here |
 
 Records whose folder name starts with `_superseded_` are retained because the paper
@@ -101,7 +101,7 @@ primary results.
 |---|---|
 | Root engineering log (41 KB developer diary) | process record, not paper material |
 | `DEPLOYMENT_OPEN_ISSUES.md` | internal pre-submission checklist, explicitly marked "not paper text, do not submit" |
-| iPhone / WebGPU / desktop-WebGPU chains (incl. `.github/workflows/coreml-placement.yml`, `webapp/`) | removed from the paper on 2026-10-08; see `measurement_records/verification/ARCHIVE_ios_removed_from_paper.md` |
+| iPhone / WebGPU / desktop-WebGPU chains (incl. `.github/workflows/coreml-placement.yml`, `webapp/`) | removed from the paper on 2026-10-08; see `deployment_evaluation_results/raw_records/verification/ARCHIVE_ios_removed_from_paper.md` |
 | TFLite backend comparison (`.tflite` binaries, saved models) | removed from the paper; see `ARCHIVE_appendix_backend_comparison.md` |
 | Per-frame PNG screenshots (≈11 MB per session) | not needed to reproduce any reported number |
 | `weights/*.pt` | training artefact; export script included instead |
