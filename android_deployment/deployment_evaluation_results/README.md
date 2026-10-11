@@ -48,16 +48,20 @@ setup and the first inferences reheat the device within ~10 s, so the temperatur
 start of official timing is well above 46 °C. That reading is recorded separately as
 `pre_timing_skin_c` and is what the paper reports.
 
-## Two cells where the appendix differs from the raw record
+## Two cells that were corrected against the raw record
 
 Both are in diagnostic or record fields and neither affects a reported result. They were
-found while deriving the tables above and are reported here rather than silently
-normalised:
+found while deriving the tables above and have been corrected in the extended appendix
+shipped with this repository
+([`../extended_paper_materials/appendix_B5_deployment_experiments.md`](../extended_paper_materials/appendix_B5_deployment_experiments.md)):
 
-| Cell | Appendix prints | Raw record | Note |
+| Cell | Was | Now | Why |
 |---|---|---|---|
-| Appendix B.5-1, FSDH-YOLO `post` | 0.5 ms | 0.4 ms from rounds 1–3 (0.4468) | The appendix value matches the all-4-rounds mean (0.4562). Every other cell in that table uses rounds 1–3, i.e. round 0 excluded. Decode/NMS is a diagnostic split; the end-to-end figures are unaffected. |
-| Appendix B.5-4, run 2, pre-timing charge | 81 % | 80 % | The appendix value is the *cooldown* reading (17:15:42); the pre-timing reading (17:15:53) is 80 %. Charge level is a record field, not a measurement. |
+| Table B.5-1, FSDH-YOLO `post` | 0.5 ms | **0.4 ms** | Every other cell in that table uses the rounds-1–3 caliber (round 0 is the excluded cold start); 3-of-3 gives 0.4468 → 0.4. The 0.5 figure was the all-four-rounds mean (0.4562). Decode/NMS is a diagnostic split — the end-to-end 157.5 ms / 6.35 FPS are unaffected. |
+| Table B.5-4, run 2, pre-timing charge | 81 % | **80 %** | 81 % was the *cooldown* reading (17:15:42); the pre-timing reading (17:15:53) is 80 %. Runs 1 and 3 happen to have identical values at both checkpoints, so only run 2 exposed the mix-up. Charge level is a record field, not a measurement. |
+
+The corresponding CSVs in this folder had always carried the record-derived values
+(0.4 and 80 %); the tables above are now consistent with them.
 
 ## Raw records
 

@@ -41,7 +41,7 @@ The complete training implementation is based on the publicly available
 │   └── per_seed/*.csv             13 machine-readable CSVs
 │
 ├── android_deployment/          §3.9 + Appendix A.7 + Appendix B.5
-│   ├── paper_texts/               the three paper sections, verbatim
+│   ├── extended_paper_materials/  §3.9, A.7 and B.5 in full
 │   ├── android_app/               Android Studio project (Kotlin)
 │   ├── deployment_evaluation_results/  summary tables + raw device records
 │   ├── scripts/                   export & verification scripts
@@ -132,10 +132,14 @@ artefacts and cross-checked against the manuscript:
 
 See [`reproduction_notes/`](reproduction_notes) for the full provenance map.
 
-Four documentation defects were found in the manuscript during this pass — none affects a
-computed result. Three are reported in `reproduction_notes/README.md` § *Known manuscript
-issues*; the fourth is a diagnostic cell in Appendix B.5, noted in
-[`android_deployment/deployment_evaluation_results/README.md`](android_deployment/deployment_evaluation_results/README.md).
+Two documentation defects were found **in the manuscript** during this pass, both
+labelling/rounding issues that do not affect a computed result; they are reported in
+`reproduction_notes/README.md` § *Known manuscript issues* so they can be fixed before
+submission.
+
+Separately, two cells in the **extended deployment appendix** shipped here disagreed with
+the raw device records. Those have been **corrected in this repository** — see
+[`android_deployment/extended_paper_materials/README.md`](android_deployment/extended_paper_materials/README.md).
 
 ---
 

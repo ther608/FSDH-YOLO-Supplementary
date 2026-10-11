@@ -124,15 +124,12 @@ revision; every row now matches the record.
 
 ---
 
-## 6. Known manuscript issues
+## 6. Known issues
 
-Four documentation defects remain in the current manuscript revision. **None affects a
-computed result**; all four are labelling, scope or last-digit issues.
+### 6a — two defects in the manuscript (unfixed; fix before submission)
 
-Items 1 and 2 are in the main analysis appendices. Items 3 and 4 are single cells in
-deployment appendix tables — a diagnostic split and a record field respectively — and are
-also noted in
-[`../android_deployment/deployment_evaluation_results/README.md`](../android_deployment/deployment_evaluation_results/README.md).
+Both are labelling/rounding issues and **neither affects a computed result**. They are in
+the manuscript text as of the revision checked here.
 
 ### Issue 1 — Appendix B.2 summary table, row 4 (label does not match the data)
 
@@ -174,12 +171,23 @@ have been corrected in the current revision, two remain:
 The corresponding table columns in Table 12 are themselves correct; only the last digit
 of these two text values differs.
 
-### Issue 3 — Appendix B.5-1, FSDH-YOLO decode/NMS cell (mixed aggregation scope)
+### 6b — two cells in the extended deployment appendix (corrected here)
+
+**These are not in the manuscript.** The manuscript's Appendix B.5 carries a single table
+(the three 60 s runs plus the post-hoc recheck); the fixed-input decomposition and the
+thermal table exist only in the extended deployment appendix shipped in this repository
+under
+[`../android_deployment/extended_paper_materials/`](../android_deployment/extended_paper_materials).
+Both cells were corrected there during this pass, so the appendix now agrees with the raw
+device records. They are recorded here because the correction is a deviation from the
+version of that file held elsewhere.
+
+### Issue 3 — Table B.5-1, FSDH-YOLO decode/NMS cell (mixed aggregation scope)
 
 The fixed-input table splits the pipeline latency into preprocess / inference / decode-NMS.
-For FSDH-YOLO the appendix prints `5.5 / 151.5 / 0.5`; the first two match the
-rounds-1–3 means (round 0 is the excluded cold start), but the third matches the
-**all-four-rounds** mean:
+For FSDH-YOLO the appendix read `5.5 / 151.5 / 0.5`; the first two match the rounds-1–3
+means (round 0 is the excluded cold start), but the third matched the **all-four-rounds**
+mean:
 
 | Scope | preprocess | inference | decode/NMS |
 |---|---|---|---|
@@ -188,23 +196,27 @@ rounds-1–3 means (round 0 is the excluded cold start), but the third matches t
 
 Every other cell in that table — including both rows of the YOLO11n baseline — uses
 rounds 1–3. The end-to-end figure (157.5 ms, 6.35 FPS) is unaffected; decode/NMS is
-recorded for diagnosis only. **Suggested fix:** change `0.5` to `0.4`, or state the scope.
+recorded for diagnosis only.
+
+**Corrected in this repository:** the cell now reads `0.4`. If the extended appendix is
+ever promoted into the manuscript, carry the correction across.
 
 ### Issue 4 — Appendix B.5-4, run 2 charge level (wrong reading used)
 
-The thermal table reports the run-2 pre-timing charge level as `81 %`. The raw session log
-records 81 % at the *cooldown* check (17:15:42) and 80 % at the *pre-timing* reading
+The thermal table reported the run-2 pre-timing charge level as `81 %`. The raw session
+log records 81 % at the *cooldown* check (17:15:42) and 80 % at the *pre-timing* reading
 (17:15:53); runs 1 and 3 happen to have identical values at both points, so only run 2
 exposes the mix-up.
 
-| Run | pre-timing charge, log | appendix |
-|---|---|---|
-| 1 | 81 % | 81 % ✓ |
-| 2 | **80 %** | 81 % ✗ |
-| 3 | 80 % | 80 % ✓ |
+| Run | pre-timing charge, log | table (was) | table (now) |
+|---|---|---|---|
+| 1 | 81 % | 81 % ✓ | 81 % |
+| 2 | **80 %** | 81 % ✗ | **80 %** |
+| 3 | 80 % | 80 % ✓ | 80 % |
 
-Charge level is a record field, not a measurement. **Suggested fix:** change the run-2
-value to `80 → 80 %`.
+Charge level is a record field, not a measurement.
+
+**Corrected in this repository:** the cell now reads `80 → 80 %`.
 
 ---
 

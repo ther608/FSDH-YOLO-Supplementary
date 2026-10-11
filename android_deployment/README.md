@@ -22,7 +22,8 @@ The deployment chain is:
 
 ```
 android_deployment/
-├── paper_texts/                    the three paper sections, verbatim (Chinese)
+├── extended_paper_materials/       §3.9, A.7 and B.5 in full (Chinese)
+│   ├── README.md                     how these relate to the condensed manuscript text
 │   ├── section_3.9_mobile_deployment.md
 │   ├── appendix_A7_deployment_protocol.md
 │   └── appendix_B5_deployment_experiments.md
@@ -77,7 +78,7 @@ Fixed input (Appendix B.5.1) — pipeline latency
 | Model | T_pipeline / ms | SD | FPS | pre / infer / post / ms | mean detections |
 |---|---:|---:|---:|---|---:|
 | YOLO11n baseline | 128.8 | 6.9 | 7.76 | 5.1 / 123.3 / 0.4 | 23.7 |
-| **FSDH-YOLO-n** (deployed) | **157.5** | 8.3 | **6.35** | 5.5 / 151.5 / 0.5 | 25.9 |
+| **FSDH-YOLO-n** (deployed) | **157.5** | 8.3 | **6.35** | 5.5 / 151.5 / 0.4 | 25.9 |
 
 The same-session paired latency ratio is **R = 1.22**, comparable to the ≈1.19 ratio of
 theoretical compute between the two models.
