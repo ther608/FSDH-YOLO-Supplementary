@@ -105,10 +105,10 @@ adb shell dumpsys meminfo com.lychee.fsdh
 
 **No performance re-measurement is implied, and no equivalence is claimed.**
 Removing the TFLite dependency is a build-configuration change, so two 60 s sessions
-were run on the slim build (`sessions/slim_sanity/`, `sessions/slim_sanity2/`).
+were run on the slim build (`raw_records/sessions/slim_sanity/`, `raw_records/sessions/slim_sanity2/`).
 Their latencies (272.99 and 313.59 ms) sit **above** the primary three-run range
 (242.34–257.09 ms), which prompted a third run on the **full** build
-(`sessions/full_recheck/`, 294.41 ms).
+(`raw_records/sessions/full_recheck/`, 294.41 ms).
 
 That recheck is the same build as primary run 1 and, at a pre-timing SKIN only
 0.20 °C higher, measured 21.5 % slower about 16 min later. So the build effect and

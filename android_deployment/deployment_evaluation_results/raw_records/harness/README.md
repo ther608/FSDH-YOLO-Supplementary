@@ -9,6 +9,10 @@ installed. They write a timestamped log next to themselves and pull nothing —
 the session JSON and the 12 sampled frames are pulled separately from
 `/sdcard/Android/data/com.lychee.fsdh/files/`.
 
+The `Produced` column names the output folder as the script creates it when run from
+the deployment working directory. In this repository those folders live under
+[`../sessions/`](../sessions).
+
 | Script | Produced | Notes |
 |---|---|---|
 | `run_rounds.ps1` | `sessions/run1..3/` | The predefined protocol: 3 × 60 s, app force-stopped between runs, each run starting only after the HAL SKIN sensor falls to ≤ 46 °C (max 300 s wait), CPU/SKIN/battery logged before and after. |

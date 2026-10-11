@@ -84,8 +84,8 @@ the re-simplified variant, re-run `scripts/export_onnx.py`.
 | Appendix B.5-2 (L2 on-device decode) | `deployment_evaluation_results/verification_results.csv`, raw in `deployment_evaluation_results/raw_records/verification/decode_validation.json` |
 | Appendix B.5-3 (three 60 s runs) | `deployment_evaluation_results/continuous_camera_sessions.csv`; per-frame detail in `deployment_evaluation_results/raw_records/sessions/run{1,2,3}/record.json` |
 | Appendix B.5-4 (thermal state) | `deployment_evaluation_results/thermal_state.csv`, raw in `deployment_evaluation_results/raw_records/sessions/runlog_cooled.txt` |
-| Appendix B.5-5 (post-hoc diagnostics) | `results_summary.json` → `diagnostics.runs`; `sessions/slim_sanity*/record.json`, `sessions/full_recheck/record.json` |
-| Appendix B.5-6 (back-to-back control) | `sessions/_superseded_backtoback/run{1,2,3}/record.json` |
+| Appendix B.5-5 (post-hoc diagnostics) | `deployment_evaluation_results/continuous_camera_sessions.csv` (rows marked *post-hoc diagnostic*); raw in `deployment_evaluation_results/results_summary.json` → `diagnostics.runs` and `raw_records/sessions/slim_sanity*/`, `raw_records/sessions/full_recheck/` |
+| Appendix B.5-6 (back-to-back control) | `deployment_evaluation_results/continuous_camera_sessions.csv` (rows marked *back-to-back control*); raw in `deployment_evaluation_results/raw_records/sessions/_superseded_backtoback/run{1,2,3}/record.json` |
 | Appendix B.5-7 (deployment footprint) | `deployment_evaluation_results/deployment_footprint.md` |
 | Figure 11 (app interface) | reproduced from the app itself; screenshots are not redistributed here |
 

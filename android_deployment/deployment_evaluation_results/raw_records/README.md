@@ -146,10 +146,10 @@ across sessions, and never compared between the two packages.
 The two current ones are rebuilt by
 `scripts\build_apk.ps1 -Flavor slim` / `-Flavor full`. Both are **debug** builds;
 a release build with R8 and an arm64-only ABI filter would be substantially
-smaller (see `protocol/live_session_protocol.md`).
+smaller (see `live_session_protocol.md`).
 
 APKs are excluded from git (`../../.gitignore`) — they are large and regenerable
-from the build script. Everything else under `measurements/` is committed.
+from the build script. Everything else in this folder tree is committed.
 
 ---
 

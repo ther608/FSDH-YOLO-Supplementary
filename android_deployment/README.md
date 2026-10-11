@@ -3,6 +3,11 @@
 Materials for §3.9 (Mobile deployment validation), Appendix A.7 (Deployment evaluation
 protocol) and Appendix B.5 (Deployment supplementary experiments) of the manuscript.
 
+The manuscript renders those three passages in condensed form — a few paragraphs for
+§3.9, four paragraphs of protocol for A.7, and a single table for B.5. The documents in
+[`extended_paper_materials/`](extended_paper_materials) are the **full versions** they
+were condensed from, carrying the complete protocol and all seven B.5 tables.
+
 The deployment chain is:
 
 > **PyTorch → ONNX (opset 17, static 640×640, FP32, no in-graph NMS) → Android + ONNX Runtime CPU**
