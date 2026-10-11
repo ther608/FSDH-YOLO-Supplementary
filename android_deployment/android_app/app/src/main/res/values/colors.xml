@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light surfaces, same hue family as the web app's style.css so a
+         screenshot from either deployment still reads as one product. The
+         three class colours are unchanged and remain the ones the paper
+         figures use. -->
+    <color name="bg">#FFF3F5F8</color>
+    <color name="panel">#FFFFFFFF</color>
+    <color name="line">#FFDCE3EC</color>
+    <color name="fg">#FF16202B</color>
+    <color name="dim">#FF5B6A79</color>
+
+    <!-- Class colours: unripe / semi-ripe / ripe (web app c0 / c1 / c2) -->
+    <color name="c0">#FF22C55E</color>
+    <color name="c1">#FFF59E0B</color>
+    <color name="c2">#FFEF4444</color>
+
+    <!-- Deepened from the web app's #2F7DF6. That blue is fine on a dark
+         surface but only manages 3.6:1 behind white button text on a light
+         one; this reaches ~5.9:1. -->
+    <color name="accent">#FF1B5FD9</color>
+
+    <!-- The camera stage stays dark: it is the letterbox surround for a
+         full-bleed preview, and a bright plate there reads as a rendering
+         fault rather than as a viewfinder. -->
+    <color name="stageBg">#FF101418</color>
+
+    <!-- Deliberately NOT lightened with the rest. The adaptive-icon glyph is a
+         pale-pink lychee whose outer circle vanishes against a light plate.
+         The launcher icon is a brand mark, not an app surface. -->
+    <color name="launcher_bg">#FF0B0F14</color>
+</resources>

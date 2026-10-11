@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English UI. The strings that end up in a fixed-width cell (metric labels,
+     legend entries, control labels) are deliberately the short forms: each of
+     the six metric cells is one sixth of the screen, and the longest of these
+     has to fit there without wrapping. -->
+<resources>
+    <string name="app_name">FSDH-YOLO Litchi Ripeness</string>
+
+    <string name="header_title">FSDH-YOLO</string>
+    <string name="header_sub">Litchi ripeness detection</string>
+    <string name="status_starting">Starting…</string>
+
+    <string name="perm_rationale">Camera access is required for live litchi ripeness detection.</string>
+
+    <!-- metric row.
+         The unit lives in the LABEL, not appended to each value. Six cells
+         share a 393dp-wide screen, so "326.9 ms" at 15sp would autosize down
+         to fill its cell edge to edge and butt up against the divider, and the
+         row read as "326.9 ms14.8 ms". With the unit moved up, the values stay
+         at the full 15sp and keep a gap around the dividers. -->
+    <string name="m_fps">FPS</string>
+    <string name="m_e2e">E2E avg ms</string>
+    <string name="m_pre">Pre avg ms</string>
+    <string name="m_inf">Infer avg ms</string>
+    <string name="m_post">Post avg ms</string>
+    <string name="m_frames">Frames</string>
+    <string name="m_det">Objects</string>
+
+    <!-- legend -->
+    <string name="legend_unripe_zero">U Unripe 0</string>
+    <string name="legend_semi_zero">S Semi 0</string>
+    <string name="legend_ripe_zero">R Ripe 0</string>
+    <string name="legend_unripe">U Unripe %d</string>
+    <string name="legend_semi">S Semi %d</string>
+    <string name="legend_ripe">R Ripe %d</string>
+
+    <!-- controls -->
+    <string name="label_conf">Threshold</string>
+    <string name="label_iou">NMS IoU</string>
+    <string name="label_conf_value">Threshold %.2f</string>
+    <string name="label_iou_value">NMS IoU %.2f</string>
+    <string name="label_model">Model</string>
+    <string name="label_backend">Backend</string>
+    <string name="conf_helper">Overlay filter only — it does not affect the paper\'s measured metrics.</string>
+
+    <string name="btn_bench">Benchmark</string>
+    <string name="btn_session">Rec 60 s</string>
+    <string name="btn_session_stop">Stop</string>
+    <string name="btn_switch">Flip camera</string>
+    <string name="btn_shot">Screenshot</string>
+
+    <!-- status strip while a measurement session is running -->
+    <string name="status_recording">REC %.1f / %.0f s · %d frames</string>
+    <string name="status_starting_rec">Starting session…</string>
+
+    <!-- bench screen -->
+    <string name="bench_ready">Ready.</string>
+    <string name="btn_capture">1. Capture</string>
+    <string name="btn_run">2. Run</string>
+    <string name="btn_share">3. Export</string>
+</resources>

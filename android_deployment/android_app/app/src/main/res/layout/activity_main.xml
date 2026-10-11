@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Mirrors the web app's layout: topbar / stage (contain) / metric row /
+  class legend / controls. Same palette and type scale, so the phone build and
+  the browser build read as one product.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <!-- === topbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_title"
+                android:textColor="@color/fg"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- 0dp + weight: the subtitle takes whatever the title leaves and
+                 ellipsises. Two wrap_content views in a row would each claim
+                 their full width and run off the right edge instead. -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/header_sub"
+                android:textColor="@color/dim"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- maxLines=1 overrides Helper's 2: this is a one-line status strip,
+             and a second row would push the camera stage down. ellipsize is the
+             backstop for a longer engine name on a narrower phone. -->
+        <TextView
+            android:id="@+id/status"
+            style="@style/Helper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minHeight="16dp"
+            android:text="@string/status_starting" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- === stage
+         ImageAnalysis and Preview are pinned to the same aspect ratio in
+         MainActivity, and this uses FIT_CENTER, so the overlay's mapping and
+         what the user actually sees are framed identically. -->
+    <FrameLayout
+        android:id="@+id/stage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/stageBg">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lychee.fsdh.OverlayView
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/permissionHint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/perm_rationale"
+            android:textColor="@color/dim"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- === metrics
+         Two rows, all four latency cells read from the SAME 20-frame window and
+         FPS is derived from that same mean. Mixing windows (a rolled-up E2E next
+         to instantaneous stages) is what made an earlier build read as an
+         arithmetic error on screen.
+         Units sit in the labels so the values keep full size. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/panel"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_e2e" />
+                <TextView android:id="@+id/mE2e" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+
+            <View style="@style/StatDivider" />
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_inf" />
+                <TextView android:id="@+id/mInf" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+
+            <View style="@style/StatDivider" />
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_pre" />
+                <TextView android:id="@+id/mPre" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+
+            <View style="@style/StatDivider" />
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_post" />
+                <TextView android:id="@+id/mPost" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_fps" />
+                <TextView android:id="@+id/mFps" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+
+            <View style="@style/StatDivider" />
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_frames" />
+                <TextView android:id="@+id/mFrames" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+
+            <View style="@style/StatDivider" />
+
+            <LinearLayout style="@style/StatCell">
+                <TextView style="@style/StatLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/m_det" />
+                <TextView android:id="@+id/mDet" style="@style/StatValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- === class legend w/ counts
+         One weighted cell per class, not a centred run of wrap_content views.
+         The English labels are wider than the Chinese ones they replaced, and
+         a wrap_content run simply overflows the row when it gets too long;
+         a cell per class with the text weighted means the text shrinks to fit
+         its own third instead. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/panel"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View android:layout_width="11dp" android:layout_height="11dp" android:background="@color/c0" />
+            <TextView android:id="@+id/legendUnripe" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="6dp" android:layout_weight="1" android:gravity="center"
+                android:autoSizeTextType="uniform" android:autoSizeMinTextSize="9sp" android:autoSizeMaxTextSize="13sp"
+                android:maxLines="1" android:textColor="@color/fg" android:textSize="13sp" android:text="@string/legend_unripe_zero" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View android:layout_width="11dp" android:layout_height="11dp" android:background="@color/c1" />
+            <TextView android:id="@+id/legendSemi" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="6dp" android:layout_weight="1" android:gravity="center"
+                android:autoSizeTextType="uniform" android:autoSizeMinTextSize="9sp" android:autoSizeMaxTextSize="13sp"
+                android:maxLines="1" android:textColor="@color/fg" android:textSize="13sp" android:text="@string/legend_semi_zero" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View android:layout_width="11dp" android:layout_height="11dp" android:background="@color/c2" />
+            <TextView android:id="@+id/legendRipe" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginStart="6dp" android:layout_weight="1" android:gravity="center"
+                android:autoSizeTextType="uniform" android:autoSizeMinTextSize="9sp" android:autoSizeMaxTextSize="13sp"
+                android:maxLines="1" android:textColor="@color/fg" android:textSize="13sp" android:text="@string/legend_ripe_zero" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- === controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/panel"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Fixed 112dp label column: "Threshold 0.45" is ~95dp at 13sp, and
+                 a wrap_content label would otherwise eat into the slider when
+                 the text runs long. 112dp is the widest of the four labels. -->
+            <TextView
+                android:id="@+id/labelConf"
+                style="@style/RowLabel"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_conf" />
+
+            <SeekBar
+                android:id="@+id/seekConf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="95"
+                android:progress="45" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Helper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/conf_helper" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelIou"
+                style="@style/RowLabel"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_iou" />
+
+            <SeekBar
+                android:id="@+id/seekIou"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="95"
+                android:progress="70" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/RowLabel" android:layout_width="112dp" android:layout_height="wrap_content" android:text="@string/label_model" />
+
+            <Spinner
+                android:id="@+id/spinModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/RowLabel" android:layout_width="112dp" android:layout_height="wrap_content" android:text="@string/label_backend" />
+
+            <Spinner
+                android:id="@+id/spinEngine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!-- Four equal-weight buttons, sharing ONE fixed text size.
+                 They used to autosize individually, which fits each label to
+                 its own button, so "Benchmark" came out a size larger than
+                 "Flip camera" and the row read as ragged. A quarter of a 393dp
+                 screen fits the longest label at 11sp; ellipsize is the
+                 backstop on narrower devices, and it is deliberately visible
+                 rather than a silent clip. -->
+            <Button
+                android:id="@+id/btnBench"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/btn_bench"
+                android:textSize="11sp" />
+
+            <!-- Starts/stops the 60 s live measurement session. -->
+            <Button
+                android:id="@+id/btnSession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/btn_session"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnShot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/btn_shot"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/btn_switch"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

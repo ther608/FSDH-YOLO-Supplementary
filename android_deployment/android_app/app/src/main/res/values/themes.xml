@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Fsdh" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="colorSurface">@color/panel</item>
+        <item name="colorOnSurface">@color/fg</item>
+        <!-- Dark icons: both bars are now painted the light app background. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <!-- Stat cell: small dim label above a bold value (web app's metric row).
+         Six of these share the screen width, and the English labels/values are
+         wider than the Chinese they replaced, so both take an autosize range
+         and shrink to fit instead of clipping. autoSizeTextType needs API 26;
+         minSdk is 26. It only engages on a bounded width, which is why these
+         are match_parent rather than wrap_content. -->
+    <style name="StatLabel">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/dim</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="android:autoSizeMaxTextSize">11sp</item>
+        <!-- keeps the text off the 1dp dividers between cells -->
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+
+    <style name="StatValue">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">10sp</item>
+        <item name="android:autoSizeMaxTextSize">15sp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- One metric cell: label over value, an equal share of the row. -->
+    <style name="StatCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="StatDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <!-- Fixed-width label column for the control rows. The width is set in the
+         layout (not here) so all four rows line up on the same x; capping it is
+         what stops a long label from squeezing the slider next to it. -->
+    <style name="RowLabel">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/fg</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Helper">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/dim</item>
+        <item name="android:maxLines">2</item>
+    </style>
+</resources>

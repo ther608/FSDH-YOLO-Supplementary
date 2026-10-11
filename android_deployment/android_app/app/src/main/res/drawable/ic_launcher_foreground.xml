@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- stylised lychee: flesh + seed + stem -->
+    <path
+        android:fillColor="#FFF6E3E3"
+        android:pathData="M54,32 m-22,0 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0" />
+    <path
+        android:fillColor="#FFE05A5A"
+        android:pathData="M54,32 m-17,0 a17,17 0 1,0 34,0 a17,17 0 1,0 -34,0" />
+    <path
+        android:fillColor="#FF6D3B2E"
+        android:pathData="M54,32 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0" />
+    <path
+        android:fillColor="#FF4CAF50"
+        android:pathData="M52,12 h4 v12 h-4 z" />
+    <path
+        android:fillColor="#FF4CAF50"
+        android:pathData="M56,14 c8,-2 12,2 12,6 c-6,2 -10,0 -12,-6 z" />
+</vector>
